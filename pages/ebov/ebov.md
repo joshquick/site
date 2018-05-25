@@ -3,7 +3,7 @@ title: Ebola virus Nanopore sequencing resources
 keywords: ebov
 last_updated: May 24, 2018
 tags: [ebov]
-summary:
+summary: A collection of resources and documents for the genome sequencing of Ebola virus (EBOV) using Oxford Nanopore Technology's MinION platform. Includes a tiled primer scheme, complete lab protocol & equipement/reagent list.
 sidebar: artic_sidebar
 permalink: ebov/
 toc: false

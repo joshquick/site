@@ -191,8 +191,7 @@ Ebola virus Nanopore sequencing kit-list:
     |----------------|------------|------------|-------| 
     |Heat Activation |98&deg;C        |30 seconds  |1      |
     |Denaturation    |98&deg;C        |15 seconds  |35     |
-    |Annealing       |60&deg;C        |30 seconds  |.      |
-    |Extension       |72&deg;C        |120 seconds |.      |
+    |Annealing       |65&deg;C        |300 seconds  |.      |
     |Hold            |4&deg;C         |Indefinite  |1      |				
 
 10. Clean-up the amplicons using the following protocol in the TEMPLATE HOOD:
@@ -293,7 +292,7 @@ Ebola virus Nanopore sequencing kit-list:
  
 > **NOTE:** This is a ‘one-pot ligation’ protocol for native barcoded ligation libraries. We have seen no reduction in performance compared to standard libraries, and is made faster by using the Ultra II® ligation module which is compatible with the Ultra II® end repair/dA-tailing module removing a clean-up step. It can be used with or without the optional FFPE DNA repair step. If you have the time I would recommend using the double incubation times in <span style="color:blue">blue</span>, if you are in a hurry the times in <span style="color:red">red</span> are a good compromise between speed and efficiency.
 
-1. Set up either the following end-prep reaction for each biological sample:
+1. Set up the following end-prep reaction for each biological sample:
 
    | DNA (500 ng) | 25&micro;L
    | Ultra II End Prep Reaction Buffer | 3.5&micro;L
@@ -301,15 +300,6 @@ Ebola virus Nanopore sequencing kit-list:
    | Total | 30&micro;L    
 > **NOTE:** Amount of RNA can vary from 250-1000ng, less than this and the coverage and depth may be sub-optimal. 
     
-   Or, if DNA samples are lower Ct or have been extracted from difficult samples (fecal matter, saliva), include FFPE DNA Repair reagents into the reaction. These do not affect the efficiency of the reaction:
-    
-   |DNA (500 ng) | 24&micro;L
-   |Ultra II End Prep Reaction Buffer | 1.75&micro;L
-   |FFPE DNA Repair Buffer | 1.75&micro;L
-   |Ultra II End Prep Enzyme Mix | 1.5&micro;L
-   |FFPE DNA Repair Mix | 1&micro;L
-   |Total | 30&micro;L
-
 2. Incubate at RT for <span style="color:red">5 mins</span> or <span style="color:blue">10 mins</span> then 65&deg;C for <span style="color:red">5 mins</span> or <span style="color:blue">10 mins</span>
 
 3. Place on ice for 30 secs
@@ -327,7 +317,7 @@ Ebola virus Nanopore sequencing kit-list:
 
 6. Pool all barcoded fragments together into a clean 1.5 ml Eppendorf tube
 
-7. Add 26.75&micro;L Ampure XP beads per sample.
+7. Add 53&micro;L Ampure XP beads per sample.
 
 8. Incubate for <span style="color:red">5 mins</span> or <span style="color:blue">10 mins</span>.
 
