@@ -25,10 +25,10 @@ Ebola primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
 Ebola virus Nanopore sequencing protocol:
-: [http://artic.network/ebov-seq-sop-1.0.0.html](http://artic.network/ebov-seq-sop-1.0.0.html)
+: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](http://artic.network/ebov/ebov-seq-sop-1.0.0.html)
 
 Ebola virus Nanopore sequencing kit-list:
-: [http://artic.network/ebov-seq-kit-1.0.0.html](http://artic.network/ebov-seq-kit-1.0.0.html)
+: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](http://artic.network/ebov/ebov-seq-kit-1.0.0.html)
 
 {% include icon-callout.html
 type='default'
