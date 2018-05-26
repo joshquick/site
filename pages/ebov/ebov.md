@@ -14,18 +14,17 @@ Pan-Ebola virus primer scheme:
 : [https://github.com/artic-network/primer/schemes/tree/master/ZaireEbola/V1](https://github.com/artic-network/primer/schemes/tree/master/ZaireEbola/V1) 
 
 Ebola virus Nanopore sequencing protocol:
-: Web: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](http://artic.network/ebov/ebov-seq-sop-1.0.0.html)
-: PDF:
+: Web: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](/ebov/ebov-seq-sop-1.0.0.html)
+: PDF: [ARTIC-EBOV-seqSOP-v1.0.0.pdf](/files/ARTIC-EBOV-seqSOP-v1.0.0.pdf)
 
 Ebola virus Nanopore sequencing kit-list:
-: Web: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](http://artic.network/ebov/ebov/-seq-kit-1.0.0.html)
-: PDF:
+: Web: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](/ebov/ebov-seq-kit-1.0.0.html)
+: PDF: [ARTIC-EBOV-seqKit-v1.0.0.pdf](/files/ARTIC-EBOV-seqKit-v1.0.0.pdf)
 
 An alignment of 35 complete or nearly-complete genomes spaning 1976-2014.
 : [35 EBOV genome alignment - FASTA file.](https://github.com/artic-network/ebov/blob/master/reference_genomes/ebov-reference-genomes-35.fasta)
 : [Maximum likelihood phylogeny - tree file.](https://github.com/artic-network/ebov/blob/master/reference_genomes/ebov-reference-genomes-35.phyml.tree)
-
-{% include image.html file="ebov-reference-genomes-35.phyml.tree.png" caption="Maximum likelihood tree of 35 reference genomes." %}
+: {% include image.html file="ebov-reference-genomes-35.phyml.tree.png" caption="Maximum likelihood tree of 35 reference genomes." %}
 
 {% include icon-callout.html
 type='default'
