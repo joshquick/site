@@ -11,7 +11,7 @@ folder: ebov
 ---
 
 Pan-Ebola virus primer scheme:
-: [https://github.com/artic-network/primer/schemes/tree/master/ZaireEbola/V1](https://github.com/artic-network/primer/schemes/tree/master/ZaireEbola/V1) 
+: [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
 Ebola virus Nanopore sequencing protocol:
 : Web: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](/ebov/ebov-seq-sop-1.0.0.html)
