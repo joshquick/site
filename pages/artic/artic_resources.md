@@ -6,15 +6,30 @@ tags: [resources]
 summary:
 sidebar: artic_sidebar
 permalink: resources.html
-toc: false 
+toc: true 
 folder: artic
 ---
 
-[Primal Scheme](http://primal.zibraproject.org)
-: Web-based tool for designing multiplex PCR primers for generating tiling amplicons.
+## Tools
 
-### Presentations 
+{% include icon-callout.html
+type='default'
+file='primal-scheme.png'
+url='http://primal.zibraproject.org'
+width='17%'
+title='<a href="http://primal.zibraproject.org">Primal Scheme</a>'
+subtitle='Web-based tool for designing multiplex PCR primers for generating tiling amplicons'
+%}
 
-{% include presentations.html %}
+<hr />
+
+## Virus specific resources
+
+[Ebola virus sequencing resources](/ebov)
+: Primer schemes, protocols and reagent/equipment list for mobile sequencing of Ebola virus using Oxford Nanopore Technology's MinION platform.
+
+<br /><br />
+
+{% include wellcome-trust.html %}
 
 {% include links.html %}
