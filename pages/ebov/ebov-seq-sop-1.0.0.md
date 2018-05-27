@@ -315,7 +315,7 @@ Ebola virus Nanopore sequencing kit-list:
 
 ### Part 4: Barocoding and adaptor ligation: One-pot protocol.
  
-> **NOTE:** This is a ‘one-pot ligation’ protocol for native barcoded ligation libraries. We have seen no reduction in performance compared to standard libraries, and is made faster by using the Ultra II® ligation module which is compatible with the Ultra II® end repair/dA-tailing module removing a clean-up step. It can be used with or without the optional FFPE DNA repair step. If you have the time I would recommend using the double incubation times in <span style="color:blue">blue</span>, if you are in a hurry the times in <span style="color:red">red</span> are a good compromise between speed and efficiency.
+> **NOTE:** This is a ‘one-pot ligation’ protocol for native barcoded ligation libraries. We have seen no reduction in performance compared to standard libraries, and is made faster by using the Ultra II® ligation module which is compatible with the Ultra II® end repair/dA-tailing module removing a clean-up step. If you have the time I would recommend using the double incubation times in <span style="color:blue">blue</span>, if you are in a hurry the times in <span style="color:red">red</span> are a good compromise between speed and efficiency.
 
 1. Set up the following end-prep reaction for each biological sample:
 
