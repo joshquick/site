@@ -14,6 +14,7 @@ creation_date: 2018-05-17
 revision_date: 2018-05-27
 forked_from: doi:10.1038/nprot.2017.066
 author: Luke Meredith
+citation: "Meredith, Quick *et al.* In Prep."
 ---
 
 {% include callout.html

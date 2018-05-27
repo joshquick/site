@@ -9,8 +9,6 @@ toc: false
 folder: ebov
 ---
 
-# Validation results
-
 ## Background
 
 The ongoing outbreak of Ebola virus in the Democratic Republic of Congo has highlighted
@@ -28,6 +26,8 @@ from three separate outbreaks in order to gain confidence in the scheme's abilit
 divergent lineages.
 
 This validation acted as a test of our recently published standard operating procedure.
+
+## Results
 
 ## Data availability
 
