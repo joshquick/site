@@ -11,7 +11,7 @@ title_text: "Ebola virus sequencing protocol"
 subtitle_text: "Nanopore | amplicon | native barcoding"
 document_name: "ARTIC-EBOV-seqSOP-v1.0.0"
 creation_date: 2018-05-17
-revision_date: 2018-05-18
+revision_date: 2018-05-27
 forked_from: doi:10.1038/nprot.2017.066
 author: Luke Meredith
 ---
