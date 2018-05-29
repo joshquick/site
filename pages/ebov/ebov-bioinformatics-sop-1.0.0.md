@@ -42,15 +42,37 @@ Ebola virus Nanopore sequencing kit-list:
 
 #### Equipment required:
 
-{: .compact}
 
-#### Consumables required:
+## Software Setup
+
+### Conda
+
+Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
  
-{: .compact}
+For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
 
-#### Safety, containment and contamination recommendations
+Once installed, create an custom environment for running software:
+  
+```
+conda create -n artic
+```
 
-{: .compact}
+Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate 
+
+```
+source activate artic
+```
+
+use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
+
+```
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+```
+
+conda create -n artic
+
 
 <div class="pagebreak"> </div>
 
