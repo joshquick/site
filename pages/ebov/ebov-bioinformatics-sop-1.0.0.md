@@ -51,31 +51,59 @@ Software will be installed using [Conda](https://conda.io/) -- a cross-platform 
  
 For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
 
-Once installed, create an custom environment for running software:
+First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
+
+```
+conda config --add channels conda-forge
+conda config --add channels bioconda
+```
+
+Create an custom environment for running software and install the packages:
   
 ```
 conda create -n artic
 ```
 
-Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate 
+Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate the environment: 
 
 ```
 source activate artic
 ```
 
-use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
+and then deactivate it again using this:
 
 ```
-conda config --add channels defaults
-conda config --add channels conda-forge
-conda config --add channels bioconda
+source deactivate
 ```
 
-conda create -n artic
+### Installing software
 
+Activate the ARTIC environment:
+
+```
+source activate artic
+```
+
+Install the bioinformatics packages required:
+
+```
+conda install [list of software packages]  
+```
+
+Install the phylogenetics packages required:
+
+```
+conda install mafft phyml  
+```
 
 <div class="pagebreak"> </div>
+## Nanopore Bioinformatics
 
-## Protocol
+<div class="pagebreak"> </div>
+## Phylogenetic analysis
+
+
+
+
 
 ### Part 1
