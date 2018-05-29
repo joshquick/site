@@ -10,6 +10,14 @@ toc: false
 folder: ebov
 ---
 
+> These documents and resources are provided in the spirit of Open Science, to foster collaboration and sharing, and to benefit public health response to outbreaks. All written material is provided under the [Creative Commons Attribution (BY) license](http://creativecommons.org/licenses/by/4.0/) which allows unrestricted sharing and modification of the material as long as appropriate credit is given. 
+> 
+> We  encourage the modification, improvement and re-purposing of these methods and protocols (under the permissive terms of the CC BY license). We would be happy to host modifications on this website or encourage posting to Open Science platforms such as [http://virological.org/](http://virological.org/).
+> 
+> We also ask that use of this resource is credited in publications or reports to allow us to report this impact to our funding bodies. 
+
+### Resources and documents
+
 Pan-Ebola virus primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
@@ -21,11 +29,19 @@ Ebola virus Nanopore sequencing protocol:
 : Web: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](/ebov/ebov-seq-sop-1.0.0.html)
 : PDF: [ARTIC-EBOV-seqSOP-v1.0.0.pdf](/files/ARTIC-EBOV-seqSOP-v1.0.0.pdf)
 
+Setting up the laptop computing environment using Conda:
+: Web: [http://artic.network/ebov/ebov-it-setup-1.0.0.html](/ebov/ebov-it-setup-1.0.0.html)
+<!-- : PDF: --> 
+
 Ebola virus Nanopore bioinformatics protocol:
 : Web: [http://artic.network/ebov/ebov-bioinformatics-sop-1.0.0.html](/ebov/ebov-bioinformatics-sop-1.0.0.html)
-: PDF: 
+<!-- : PDF: --> 
 
-## Data
+Phylogenetic analysis and visualization:
+: Web: [http://artic.network/ebov/ebov-phylogenetics-sop-1.0.0.html](/ebov/ebov-phylogenetics-sop-1.0.0.html)
+<!-- : PDF: --> 
+
+### Data
 
 An alignment of 35 complete or nearly-complete genomes spaning 1976-2014.
 : [35 EBOV genome alignment - FASTA file.](https://github.com/artic-network/ebov/blob/master/reference_genomes/ebov-reference-genomes-35.fasta)

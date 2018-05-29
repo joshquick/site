@@ -26,6 +26,10 @@ body {
     margin: auto;
 }
 
+blockquote {
+    font-size: var(--body-font-size);
+}
+
 page {
     max-width: 1200px;
 }
