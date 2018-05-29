@@ -1,0 +1,94 @@
+---
+title: "ARTIC-EBOV-itSetup-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+keywords: protocol
+layout: document
+last_updated: May 18, 2018
+tags: [protocol] 
+permalink: ebov/ebov-it-setup-1.0.0.html
+folder: ebov
+title_text: "Ebola virus bioinformatics protocol"
+subtitle_text: "Nanopore | bioinformatics"
+document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+creation_date: 2018-05-26
+forked_from: doi:10.1038/nprot.2017.066
+author: Nick Loman, Andrew Rambaut
+citation: "Loman *et al.* In Prep."
+---
+
+{% include callout.html
+type='default'
+content='**Overview:** Instructions for setting up the laptop computing environment for running the MinION sequencer and performing the bioinformatics and downstream phylogenetic analyses.'
+%}
+
+<br />
+
+This document is part of the Ebola virus Nanopore sequencing protocol package:
+: [http://artic.network/ebov/](http://artic.network/ebov/)
+
+<br /><br /><br />
+
+{% include wellcome-trust.html %}
+
+<div class="pagebreak"> </div>
+
+## Preparation
+
+#### Equipment required:
+
+
+## Software Setup
+
+### Conda
+
+Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
+ 
+For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
+
+First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
+
+```
+conda config --add channels conda-forge
+conda config --add channels bioconda
+```
+
+Create an custom environment for running software and install the packages:
+  
+```
+conda create -n artic
+```
+
+Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate the environment: 
+
+```
+source activate artic
+```
+
+and then deactivate it again using this:
+
+```
+source deactivate
+```
+
+### Installing software
+
+Activate the ARTIC environment:
+
+```
+source activate artic
+```
+
+Install the bioinformatics packages required:
+
+```
+conda install [list of software packages]  
+```
+
+Install the phylogenetics packages required:
+
+```
+conda install mafft phyml  
+```
+
+### Installing Oxford Nanopore MinKNOW
+
+

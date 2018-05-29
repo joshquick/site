@@ -1,18 +1,18 @@
 ---
-title: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+title: "ARTIC-EBOV-phylogeneticsSOP-v1.0.0 | Ebola virus real-time phylogenetics"
 keywords: protocol
 layout: document
 last_updated: May 18, 2018
 tags: [protocol]
 summary:
-permalink: ebov/ebov-bioinformatics-sop-1.0.0.html
+permalink: ebov/ebov-phylogenetics-sop-1.0.0.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+document_name: "ARTIC-EBOV-phylogeneticsSOP-v1.0.0"
 creation_date: 2018-05-26
-forked_from: doi:10.1038/nprot.2017.066
-author: Nick Loman
+forked_from: 
+author: Andrew Rambaut, Philippe Lemey
 citation: "Loman *et al.* In Prep."
 ---
 
@@ -38,19 +38,18 @@ Set up the computing environment as described here in this document: [ebov-it-se
 
 ### Installing software
 
-Activate the ARTIC environment:
+Activate the ARTIC Conda environment:
 
 ```
 source activate artic
 ```
 
-Install the bioinformatics packages required:
+Install the phylogenetics packages required:
 
 ```
-conda install [list of software packages]  
+conda install mafft phyml  
 ```
-
 
 <div class="pagebreak"> </div>
-## Nanopore Bioinformatics
+## Phylogenetic analysis
 
