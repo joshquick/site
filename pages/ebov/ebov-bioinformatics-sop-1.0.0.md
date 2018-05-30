@@ -48,7 +48,7 @@ source activate artic
 Install the bioinformatics packages required:
 
 ```
-conda install -y conda install bwa samtools biopython nanopolish porechop
+conda install -y bwa samtools biopython nanopolish porechop
 ```
 
 Install the Artic pipeline:
@@ -81,7 +81,7 @@ run are. Common locations are:
 
 Mac: ```/Library/MinKNOW/data/reads/run_name```
 Linux: ```/var/lib/MinKNOW/data/reads```
-Windows ```/c/data/reads```
+Windows: ```/c/data/reads```
 
 ### Consensus sequence generation
 
@@ -96,7 +96,9 @@ You will now have a number of files labeled:
 ```
 run_name_barcode01.fastq
 run_name_barcode02.fastq
-..
+.
+.
+.
 ```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
