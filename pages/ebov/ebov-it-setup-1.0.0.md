@@ -87,16 +87,10 @@ Activate the ARTIC environment:
 source activate artic
 ```
 
-Install the bioinformatics packages required:
+Install the software packages required:
 
 ```
-conda install [list of software packages]  
-```
-
-Install the phylogenetics packages required:
-
-```
-conda install muscle phyml  
+conda install -y [list of software packages]  
 ```
 
 ### Installing Oxford Nanopore MinKNOW
