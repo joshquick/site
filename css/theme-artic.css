@@ -30,6 +30,10 @@ blockquote {
     font-size: var(--body-font-size);
 }
 
+blockquote {
+    font-size: var(--body-font-size);
+}
+
 page {
     max-width: 1200px;
 }

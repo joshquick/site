@@ -11,7 +11,8 @@ title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
 creation_date: 2018-05-26
-forked_from: doi:10.1038/nprot.2017.066
+revision_date: 
+forked_from: 
 author: Nick Loman
 citation: "Loman *et al.* In Prep."
 ---

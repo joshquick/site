@@ -186,7 +186,6 @@ code {
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
-    font-size: 120%;
     border: 1px solid var(--main-colour);
     border-left-width: 5px;
     border-radius: 3px;
