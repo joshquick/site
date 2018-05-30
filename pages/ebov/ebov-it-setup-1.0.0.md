@@ -35,8 +35,18 @@ This document is part of the Ebola virus Nanopore sequencing protocol package:
 
 #### Equipment required:
 
+Laptop requirements for MinION:
+: Intel i7 or Xeon processor
+: 16GB RAM
+: 1TB SSD hard drive
+: USB 3
+: Full Oxford Nanopore Technologies [lab and computing requirements are here](https://nanoporetech.com/sites/default/files/s3/MinION-Computer-Requirements-March-17_Final.pdf).
 
 ## Software Setup
+
+These protocols instructions assume a 64-bit UNIX, Linux or similar environment. This could be Mac OS X (Yosemite or later), Linux (e.g., Ubuntu 16 or later), or Windows 10  Subsystem for Linux. It assumes familiarity with a UNIX-like *bash* command-line. 
+
+The steps in this document should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics and phylogenetics protocols can be performed largely off-line. 
 
 ### Conda
 
