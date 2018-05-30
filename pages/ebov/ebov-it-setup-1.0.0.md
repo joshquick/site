@@ -96,7 +96,7 @@ conda install [list of software packages]
 Install the phylogenetics packages required:
 
 ```
-conda install mafft phyml  
+conda install muscle phyml  
 ```
 
 ### Installing Oxford Nanopore MinKNOW
