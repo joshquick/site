@@ -47,7 +47,7 @@ source activate artic
 Install the phylogenetics packages required:
 
 ```
-conda install muscle phyml ete3  
+conda install muscle phyml ete3
 ```
 
 ### Reference genomes
@@ -97,6 +97,8 @@ This method uses a simple model of evolution but is a useful way of getting a qu
 ```
 ete3 view -t ebov.tree
 ```
+
+
 
 <div class="pagebreak"> </div>
 ## Phylogenetic analysis
