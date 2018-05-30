@@ -29,7 +29,23 @@ divergent lineages.
 
 This validation acted as a test of our recently published standard operating procedure.
 
+## Primer pairs
+
+30 minute run:
+
+![Coverage by primer pair](/images/ebov-validation/coverage.png)
+
 ## Data availability
+
+Data hosting provided by MRC CLIMB.
+
+30 minute bulk file:
+
+[artic/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3samples_NB_87702.fast5](https://artic.s3.climb.ac.uk/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3samples_NB_87702.fast5) [4.1Gb]
+
+2 hour bulk file:
+
+[artic/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5](https://artic.s3.climb.ac.uk/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5) [20459767835 bytes]
 
 
 {% include icon-callout.html
