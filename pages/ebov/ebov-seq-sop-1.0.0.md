@@ -11,9 +11,10 @@ title_text: "Ebola virus sequencing protocol"
 subtitle_text: "Nanopore | amplicon | native barcoding"
 document_name: "ARTIC-EBOV-seqSOP-v1.0.0"
 creation_date: 2018-05-17
-revision_date: 2018-05-18
+revision_date: 2018-05-27
 forked_from: doi:10.1038/nprot.2017.066
 author: Luke Meredith
+citation: "Meredith, Quick *et al.* In Prep."
 ---
 
 {% include callout.html
@@ -136,7 +137,7 @@ Ebola virus Nanopore sequencing kit-list:
 
 3. Resuspend lyophilised primers at a concentration of 100&micro;M each
 
-4. Generate primer pool stocks by adding 20&micro;L of each primer pair to a 1.5mL Eppendorf labelled “Pool 1, 100&micro;M” or “Pool 2, 100&micro;M”. Total volume should be 460&micro;L of each pool. This is a 10x stock of each primer pool. 
+4. Generate primer pool stocks by adding 20&micro;L of each primer pair to a 1.5mL Eppendorf labelled “Pool 1, 100&micro;M” or “Pool 2, 100&micro;M”. Total volume should be 480&micro;L of Pool 1 and 460&micro;L of Pool 2. This is a 10x stock of each primer pool. 
 
 5. Dilute this primer pool 1:10 in molecular grade water, to generate 10&micro;M primer stocks. Recommend that at least 1mL of each primer pool is taken in 100&micro;L aliquots, to account for any risks of degradation of contamination. 
 
@@ -144,44 +145,69 @@ Ebola virus Nanopore sequencing kit-list:
 
    | NAME         | Sequence                         | NAME          | Sequence                 | Pool | [Stock] |
    |-------------:|----------------------------------|--------------:|--------------------------|------|---------|
-   | Ebov_1_LEFT  | `TCTTTTGTGTGCGAATAACTATGAGGA`    | Ebov_1_RIGHT  | `TGTGTCCTACTGATTGCCAAGC` | 1    | 100&micro;M   |
-   | Ebov_2_LEFT  | `CCGGTCAGTTTCTCTCCTTTGC`         | Ebov_2_RIGHT  | `ACTCTGGTATTCGCCGTAGCTT` | 2    | 100&micro;M   |
-   | Ebov_3_LEFT  | `CGATGATGATGACGACATTCCCT`        | Ebov_3_RIGHT  | `TCATCCCATTGTTCCATGCTCA` | 1    | 100&micro;M   |
-   | Ebov_4_LEFT  | `TCCACCATGGCTCACTGAAAAA`         | Ebov_4_RIGHT  | `GACCGGTTGTCATCACCAGAAG` | 2    | 100&micro;M   |
-   | Ebov_5_LEFT  | `GCAACAACAAACCATCGCATCA`         | Ebov_5_RIGHT  | `AAAACACTCTCTCAGCCGAGGT` | 1    | 100&micro;M   |
-   | Ebov_6_LEFT  | `CGACCAAGATAAAATTGTTCATATCTCGC`  | Ebov_6_RIGHT  | `TTCTTACCGGTCAGCTTGTGGA` | 2    | 100&micro;M   |
-   | Ebov_7_LEFT  | `AAGGGGAACAGTGCCGATCTAA`         | Ebov_7_RIGHT  | `TCCTGTAACGCCCATTGTGTTG` | 1    | 100&micro;M   |
-   | Ebov_8_LEFT  | `GGCGATGAAGATTAAGCCGACA`         | Ebov_8_RIGHT  | `TGTCTCATTCAGCTGGAGCAGA` | 2    | 100&micro;M   |
-   | Ebov_9_LEFT  | `AGGACCCGTCTAGTGGCTACTA`         | Ebov_9_RIGHT  | `TGCAGCACCTTCATCCTGAGTA` | 1    | 100&micro;M   |
-   | Ebov_10_LEFT | `ATACCGGAGAAGAGAGTGCCAG`         | Ebov_10_RIGHT | `ACTCTACCGGTTCGCAGATCTG` | 2    | 100&micro;M   |
-   | Ebov_11_LEFT | `ACAAGGTTTGACATCAATCTAGTTATCTCT` | Ebov_11_RIGHT | `AACCCTGAAACAACGACAGCAG` | 1    | 100&micro;M   |
-   | Ebov_12_LEFT | `TCAACGATTACACAGTGATAAAGGAGG`    | Ebov_12_RIGHT | `CTTTTGTGGCGTATCTCAGGGG` | 2    | 100&micro;M   |
-   | Ebov_13_LEFT | `TGCGGAGGTCTGATAAGAATAAACC`      | Ebov_13_RIGHT | `TGGATCGAATCAACGACAGCAT` | 1    | 100&micro;M   |
-   | Ebov_14_LEFT | `GGACCAGCTGATTGACCAGTCT`         | Ebov_14_RIGHT | `CCGCAAGCTCTAGTGACTAGGT` | 2    | 100&micro;M   |
-   | Ebov_15_LEFT | `CTGCTTATTGGGTCTTTCCGTGT`        | Ebov_15_RIGHT | `CCAAGCACAATGGTTCGAGGAA` | 1    | 100&micro;M   |
-   | Ebov_16_LEFT | `CTCAAAAATAGCAGAGATTGAGGATCCA`   | Ebov_16_RIGHT | `AACATTGCGAGTCGGATAAGGC` | 2    | 100&micro;M   |
-   | Ebov_17_LEFT | `AGAGCAAGAAAACTTTTCTATTGAGAATGT` | Ebov_17_RIGHT | `AATGGTGCCATTCTTGTAGCCG` | 1    | 100&micro;M   |
-   | Ebov_18_LEFT | `CGCCAGCCTAGCAAAAGTTACA`         | Ebov_18_RIGHT | `CTCAGTCTGTCCAAAACCGGTG` | 2    | 100&micro;M   |
-   | Ebov_19_LEFT | `CCTGTTATGAGTCGTTTTGCGG`         | Ebov_19_RIGHT | `TCCCGGGTGCAACACTTAGTTA` | 1    | 100&micro;M   |
-   | Ebov_20_LEFT | `AGTTTTCAGGAGGTGGCCAGTC`         | Ebov_20_RIGHT | `TGCATGGAAGAAATTGCTGGCT` | 2    | 100&micro;M   |
-   | Ebov_21_LEFT | `AACCCAACACCTGTGAATAATTTTCTC`    | Ebov_21_RIGHT | `AGGTAGCCTTGCTCTTTGGTCT` | 1    | 100&micro;M   |
-   | Ebov_22_LEFT | `AGTATCAGGAATGACTACTCCTAGGATG`   | Ebov_22_RIGHT | `TCAGAAGCCCTGTCAGCCTTTC` | 2    | 100&micro;M   |
-   | Ebov_23_LEFT | `AGGACGAATCACAAAACTAGTCAATGA`    | Ebov_23_RIGHT | `TGTGTGCGACCATTTTTCCAGG` | 1    | 100&micro;M   |
+   | EBOV_1_LEFT | `TGTGTGCGAATAACTATGAGGAAGAT` | EBOV_1_RIGHT | `TCAGATTCAGTGAGACTCGGCG` | 1    | 100&micro;M   |
+   | EBOV_2_LEFT | `AAAGACAAATTGCTCGGAATCACAA` | EBOV_2_RIGHT | `CAAAGGAGAGAAACTGACCGGC` | 2    | 100&micro;M   |
+   | EBOV_3_LEFT | `AAGAGAACACTTGCTGCCATGC` | EBOV_3_RIGHT | `CATACTCTCCATGCTTGGCCAG` | 1    | 100&micro;M   |
+   | EBOV_4_LEFT | `AGTTCGTCTCCATCCTCTTGCA` | EBOV_4_RIGHT | `TCCTGGAAAGGGAATGTCGTCA` | 2    | 100&micro;M   |
+   | EBOV_5_LEFT | `GAAGCTATCACTGCTGCGTCAC` | EBOV_5_RIGHT | `TAATTGGTGTCAGCATGCGAGG` | 1    | 100&micro;M   |
+   | EBOV_6_LEFT | `CCTCACAGAACAATCCACCACG` | EBOV_6_RIGHT | `TCTTTTTCAGTGAGCCATGGTGG` | 2    | 100&micro;M   |
+   | EBOV_7_LEFT | `CAGTGATGGCAAAGAGTACACGT` | EBOV_7_RIGHT | `AATGTTGGGCAGGCTAGTAGGT` | 1    | 100&micro;M   |
+   | EBOV_8_LEFT | `CCACAGTTATAGCCATAATTGTAACTCAAT` | EBOV_8_RIGHT | `TGATTGCAAATTGGGTCCGTTTG` | 2    | 100&micro;M   |
+   | EBOV_9_LEFT | `ACGCATCCCAAATGCAACAAAC` | EBOV_9_RIGHT | `GCCGAAATGTCAGGTTTCCCAA` | 1    | 100&micro;M   |
+   | EBOV_10_LEFT | `TGAGACCGTCCCTCAAAGTGTT` | EBOV_10_RIGHT | `GAGGGAAGGGAGATTGGCTCAA` | 2    | 100&micro;M   |
+   | EBOV_11_LEFT | `CATCGCCCAAGATTGATCGAGG` | EBOV_11_RIGHT | `AGGAAGCCTGTATTGCTGTTGC` | 1    | 100&micro;M   |
+   | EBOV_12_LEFT | `TTGCCTACTGCTCCTCCTGAAT` | EBOV_12_RIGHT | `GGAAGAACGAACTCCTGGAGGA` | 2    | 100&micro;M   |
+   | EBOV_13_LEFT | `CTTGTCAGAGTCAATCGGCTGG` | EBOV_13_RIGHT | `GTCCAACCCAATGTACTTTGGCA` | 1    | 100&micro;M   |
+   | EBOV_14_LEFT | `TCCACAAGCTGACCGGTAAGAA` | EBOV_14_RIGHT | `AGCATGCAGGCAATTTGAGGAT` | 2    | 100&micro;M   |
+   | EBOV_15_LEFT | `ACGGTGATTCAAATGTTAATCTTTCTCAT` | EBOV_15_RIGHT | `AGTTTGTCGACATCACTAACCTGT` | 1    | 100&micro;M   |
+   | EBOV_16_LEFT | `AGAACATTTTCCATCCCACTTGGA` | EBOV_16_RIGHT | `TTGGGGCAGTATCAGAAATGCA` | 2    | 100&micro;M   |
+   | EBOV_17_LEFT | `TGATCGACTTGCTTCCACAGTT` | EBOV_17_RIGHT | `CCGGACTCTGACCACTGATGTT` | 1    | 100&micro;M   |
+   | EBOV_18_LEFT | `ACCTCACTAGAAAAATTCGCAGTGA` | EBOV_18_RIGHT | `TTTTGGGGACTTGTTGTGGTGG` | 2    | 100&micro;M   |
+   | EBOV_19_LEFT | `CCCCAAAAGCAGAGAACACCAA` | EBOV_19_RIGHT | `CGGTTGAGGATTGAAAAGGTGC` | 1    | 100&micro;M   |
+   | EBOV_20_LEFT | `CCAACGAGACGACTCAAGCTCT` | EBOV_20_RIGHT | `TGGCTATGTTTAAAGCTCCAGTGT` | 2    | 100&micro;M   |
+   | EBOV_21_LEFT | `AGCCTCAAATCAATGAAACCAGGA` | EBOV_21_RIGHT | `TGGTCGTGTCCATCCCTTGAAT` | 1    | 100&micro;M   |
+   | EBOV_22_LEFT | `GCTTCATATGAGAGAGGACGCC` | EBOV_22_RIGHT | `GGTTCTGATGTCTTGTCTCGCC` | 2    | 100&micro;M   |
+   | EBOV_23_LEFT | `ATCCAACGGCTGATGATTTCCAG` | EBOV_23_RIGHT | `ACCCTCATCAGACCATGAGCAT` | 1    | 100&micro;M   |
+   | EBOV_24_LEFT | `CTGCTGTCGTTGTTTCAGGGTT` | EBOV_24_RIGHT | `ACACCTCCTCCACAGCTTGAAG` | 2    | 100&micro;M   |
+   | EBOV_25_LEFT | `GCAACGATCCATCCCATCAAAAA` | EBOV_25_RIGHT | `TTTCAGCCAATGGAGTTGACCTG` | 1    | 100&micro;M   |
+   | EBOV_26_LEFT | `GGGGCAATAATATCTAATTGAACTTAGCC` | EBOV_26_RIGHT | `AGAGATTCCTTGTTATTGACCATGCAG` | 2    | 100&micro;M   |
+   | EBOV_27_LEFT | `GTGACTCACAAAGGAATGGCCC` | EBOV_27_RIGHT | `CGATTTGTCGGGTTCTTGGAGC` | 1    | 100&micro;M   |
+   | EBOV_28_LEFT | `CGGATTGTTGAGCAGTATTGAAATTGG` | EBOV_28_RIGHT | `AGCAATTCTATGATGTTGTCTTGGAATCT` | 2    | 100&micro;M   |
+   | EBOV_29_LEFT | `TCCTCACTGTAAGCCAGCTTCC` | EBOV_29_RIGHT | `TTTCGGGAGTTTACAGTTGCGT` | 1    | 100&micro;M   |
+   | EBOV_30_LEFT | `CTAGTCACTAGAGCTTGCGGGT` | EBOV_30_RIGHT | `AGTCCCCATAGCCTAAGATGTCT` | 2    | 100&micro;M   |
+   | EBOV_31_LEFT | `CTGGCTATTTTAACTCGAAGGGGT` | EBOV_31_RIGHT | `AAGAATCGGCCCTTCCTCTCAG` | 1    | 100&micro;M   |
+   | EBOV_32_LEFT | `AAGTTCCTCGAACCATTGTGCTT` | EBOV_32_RIGHT | `TCATTGGCAACGGAGGGAATTG` | 2    | 100&micro;M   |
+   | EBOV_33_LEFT | `TGATAGTCAAGGATCTTGGTACAGTGT` | EBOV_33_RIGHT | `AGCAAGACCATCAGCTAACAGAG` | 1    | 100&micro;M   |
+   | EBOV_34_LEFT | `AATTGCCTTATCCGACTCGCAA` | EBOV_34_RIGHT | `TGAGCACATGAAATACTTGTCCAGA` | 2    | 100&micro;M   |
+   | EBOV_35_LEFT | `AAGGGCCTAGTTCATACAGGGG` | EBOV_35_RIGHT | `CTGCAAGGAAAGATATGTCGTGTCT` | 1    | 100&micro;M   |
+   | EBOV_36_LEFT | `ATCTTCAAGGGACCCTGGCTAG` | EBOV_36_RIGHT | `CTTAGGGTGATGGTCCTGCGTA` | 2    | 100&micro;M   |
+   | EBOV_37_LEFT | `GCGGATTAAATGTCCCTGGGTC` | EBOV_37_RIGHT | `TGGCTCCAATAAGAGGTCTTCCC` | 1    | 100&micro;M   |
+   | EBOV_38_LEFT | `GCGGAGGCTTTAACCCAAATAACT` | EBOV_38_RIGHT | `TTCCTGAGTAATGTGAAGGGGTCA` | 2    | 100&micro;M   |
+   | EBOV_39_LEFT | `GCAGTTCGAACAGTGACTTGCT` | EBOV_39_RIGHT | `ATGAGATATTGCAATTGAGTCCTCCT` | 1    | 100&micro;M   |
+   | EBOV_40_LEFT | `TAACAAGATACCGAGAAAACGAATTGATT` | EBOV_40_RIGHT | `TGAGGATCAATACTCATTAACCGTGAC` | 2    | 100&micro;M   |
+   | EBOV_41_LEFT | `GCTCATTGCGAATACTTAAGCCAAC` | EBOV_41_RIGHT | `TGTGCTTGATCCAGTTGAAGAGT` | 1    | 100&micro;M   |
+   | EBOV_42_LEFT | `CATGCATCATTGGCGTACTGGA` | EBOV_42_RIGHT | `CGGATCTCAATTGCCGTAAGTACT` | 2    | 100&micro;M   |
+   | EBOV_43_LEFT | `GGGACACGCCAATTAACGTCAT` | EBOV_43_RIGHT | `TCTGTTGTCTCTGCATCCATGG` | 1    | 100&micro;M   |
+   | EBOV_44_LEFT | `AGACCAAAGAGCAAGGCTACCT` | EBOV_44_RIGHT | `CCTGTGGTATAGTACTTTCTCTAATGATGG` | 2    | 100&micro;M   |
+   | EBOV_45_LEFT | `ACTCAGTATGCTGACTGTGAGTTACA` | EBOV_45_RIGHT | `TAAACTCAGAAGCCCTGTCAGC` | 1    | 100&micro;M   |
+   | EBOV_46_LEFT | `AGATTGCAATTGTGAAGAACGTTTCT` | EBOV_46_RIGHT | `TCAACCAAAACACTATTCCATCTGACA` | 2    | 100&micro;M   |
+   | EBOV_47_LEFT | `GCCGCAATGAATTTAACGCAACA` | EBOV_47_RIGHT | `TGTGTGCGACCATTTTTCCAGG` | 1    | 100&micro;M   |
+{: .compact}
 
-> **NOTE:** Primers need to be used at a final concentration of 0.015&micro;M per primer. In this case, each pool has 23 primers in it, so the requirement is 0.8625&micro;L of 10&micro;M primer pool per 25&micro;L reaction. For other schemes, adjust the volume added appropriately. 
+> **NOTE:** Primers need to be used at a final concentration of 0.015&micro;M per primer. In this case, Pool 1 has 48 primers in it so the requirement is 1.8&micro;L of 10&micro;M primer Pool 1 per 25&micro;L reaction. Pool 2 has 46 primers so needs 1.72&micro;L of primer Pool 2 per 25&micro;L reaction. For other schemes, adjust the volume added appropriately. 
 
 6. Set up the amplicon PCR reactions as follows in 0.5mL thin-walled PCR or strip-tubes:
 
     |Reagent |POOL 1 |POOL 2 |
     |--------|-------|-------|
     |NEB Q5® Polymerase 2X MasterMix |12.5&micro;L |12.5&micro;L |
-    |Primer Pool 1 or 2 (10&micro;M) |0.9&micro;L |0.9&micro;L |
-    |Water |7.5&micro;L |7.5&micro;L |
-    |TOTAL |20.9&micro;L |20.9&micro;L |
+    |Primer Pool 1 or 2 (10&micro;M) |1.8&micro;L |1.72&micro;L |
+    |Water |6.7&micro;L |6.78&micro;L |
+    |TOTAL |21&micro;L |21&micro;L |
     
-> **NOTE:** This should be carried out in the mastermix hood and cdna should not be taken anywhere near the mastermix hood at any stage.
+> **NOTE:** This should be carried out in the mastermix hood and cDNA should not be taken anywhere near the mastermix hood at any stage.
 
-7. In the TEMPLATE HOOD add 4.1&micro;L of cDNA to each Pool1 and Pool2 reaction mix and mix well.
+7. In the TEMPLATE HOOD add 4&micro;L of cDNA to each Pool1 and Pool2 reaction mix and mix well.
 
 8. Pulse centrifuge the tubes to remove any contents from the lid.
 
@@ -290,7 +316,7 @@ Ebola virus Nanopore sequencing kit-list:
 
 ### Part 4: Barocoding and adaptor ligation: One-pot protocol.
  
-> **NOTE:** This is a ‘one-pot ligation’ protocol for native barcoded ligation libraries. We have seen no reduction in performance compared to standard libraries, and is made faster by using the Ultra II® ligation module which is compatible with the Ultra II® end repair/dA-tailing module removing a clean-up step. It can be used with or without the optional FFPE DNA repair step. If you have the time I would recommend using the double incubation times in <span style="color:blue">blue</span>, if you are in a hurry the times in <span style="color:red">red</span> are a good compromise between speed and efficiency.
+> **NOTE:** This is a ‘one-pot ligation’ protocol for native barcoded ligation libraries. We have seen no reduction in performance compared to standard libraries, and is made faster by using the Ultra II® ligation module which is compatible with the Ultra II® end repair/dA-tailing module removing a clean-up step. If you have the time I would recommend using the double incubation times in <span style="color:blue">blue</span>, if you are in a hurry the times in <span style="color:red">red</span> are a good compromise between speed and efficiency.
 
 1. Set up the following end-prep reaction for each biological sample:
 

@@ -1,5 +1,5 @@
 ---
-title: "ARTIC-EBOV-seqSOP-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+title: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
 keywords: protocol
 layout: document
 last_updated: May 18, 2018
@@ -11,25 +11,21 @@ title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
 creation_date: 2018-05-26
-forked_from: doi:10.1038/nprot.2017.066
+revision_date: 
+forked_from: 
 author: Nick Loman
+citation: "Loman *et al.* In Prep."
 ---
 
 {% include callout.html
 type='default'
-content='**Overview:** The following protocol is adapted from the methods of [Quick et al. (2017) *Nature Protocols* **12:** 1261–1276 doi:10.1038/nprot.2017.066](http://doi.org/10.1038/nprot.2017.066) and covers primers, amplicon preparation and clean-up, then uses a single-tube protocol to barcode and adaptor ligate the library, before running minION.'
+content='**Overview:** '
 %}
 
 <br />
 
-Ebola primer scheme:
-: [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
-
-Ebola virus Nanopore sequencing protocol:
-: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](http://artic.network/ebov/ebov-seq-sop-1.0.0.html)
-
-Ebola virus Nanopore sequencing kit-list:
-: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](http://artic.network/ebov/ebov-seq-kit-1.0.0.html)
+This document is part of the Ebola virus Nanopore sequencing protocol package:
+: [http://artic.network/ebov/](http://artic.network/ebov/)
 
 <br /><br /><br />
 
@@ -39,20 +35,23 @@ Ebola virus Nanopore sequencing kit-list:
 
 ## Preparation
 
-#### Equipment required:
+Set up the computing environment as described here in this document: [ebov-it-setup-1.0.0](ebov-it-setup-1.0.0.html)
 
-{: .compact}
+### Installing software
 
-#### Consumables required:
- 
-{: .compact}
+Activate the ARTIC environment:
 
-#### Safety, containment and contamination recommendations
+```
+source activate artic
+```
 
-{: .compact}
+Install the bioinformatics packages required:
+
+```
+conda install [list of software packages]  
+```
+
 
 <div class="pagebreak"> </div>
+## Nanopore Bioinformatics
 
-## Protocol
-
-### Part 1

@@ -9,8 +9,6 @@ toc: false
 folder: ebov
 ---
 
-# Validation results
-
 ## Background
 
 The ongoing outbreak of Ebola virus in the Democratic Republic of Congo has highlighted
@@ -34,6 +32,8 @@ This validation acted as a test of our recently published standard operating pro
 30 minute run:
 
 ![Coverage by primer pair](/images/ebov-validation/coverage.png)
+
+## Results
 
 ## Data availability
 
