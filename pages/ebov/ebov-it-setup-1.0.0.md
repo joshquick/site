@@ -1,5 +1,5 @@
 ---
-title: "ARTIC-EBOV-itSetup-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+title: "Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
 keywords: protocol
 layout: document
 last_updated: May 18, 2018
@@ -8,7 +8,7 @@ permalink: ebov/ebov-it-setup.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+document_name: "ARTIC-EBOV-bioinformaticsSOP"
 version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 

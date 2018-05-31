@@ -1,5 +1,5 @@
 ---
-title: "ARTIC-EBOV-seqKit-v1.0.0 | Ebola virus Nanopore sequencing kit-list | Nanopore, amplicon, native barcoding"
+title: "Ebola virus Nanopore sequencing kit-list | Nanopore, amplicon, native barcoding"
 keywords: kit-list
 layout: document
 last_updated: May 18, 2018
@@ -9,7 +9,7 @@ permalink: ebov/ebov-seq-kit.html
 folder: ebov
 title_text: "Ebola virus sequencing kit-list"
 subtitle_text: "Nanopore | amplicon | native barcoding"
-document_name: "ARTIC-EBOV-seqKit-v1.0.0"
+document_name: "ARTIC-EBOV-seqKit"
 version: v1.0.0
 creation_date: 2018-05-21
 revision_date: 2018-05-21
@@ -27,10 +27,10 @@ Ebola primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
 Ebola virus Nanopore sequencing protocol:
-: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](http://artic.network/ebov/ebov-seq-sop.html)
+: [http://artic.network/ebov/ebov-seq-sop.html](http://artic.network/ebov/ebov-seq-sop.html)
 
 Ebola virus Nanopore sequencing kit-list:
-: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](http://artic.network/ebov/ebov-seq-kit.html)
+: [http://artic.network/ebov/ebov-seq-kit.html](http://artic.network/ebov/ebov-seq-kit.html)
 
 {% include icon-callout.html
 type='default'
