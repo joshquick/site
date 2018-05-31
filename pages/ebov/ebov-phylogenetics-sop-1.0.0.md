@@ -95,7 +95,7 @@ We will infer a phylogenetic tree using maximum likelihood with [PhyML](http://w
 fasta-phylip.py new_alignment.afa new_alignment.phy
 ```
 
-Then build the tree. This will use the default nucleotide model (HKY with gamma distributed site rate heterogeneity:
+Then build the tree. This will use the default nucleotide model (HKY with gamma distributed site rate heterogeneity):
 
 ```
 phyml --input new_alignment.phy --datatype nt
