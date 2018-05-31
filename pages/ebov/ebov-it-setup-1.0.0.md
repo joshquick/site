@@ -95,4 +95,6 @@ conda install -y [list of software packages]
 
 ### Installing Oxford Nanopore MinKNOW
 
+The software for running the MinION and basecalling can be downloaded from the [Oxford Nanopore Technologies Community site](https://community.nanoporetech.com). Log in to find the `Software Downloads` button. Download `MinKNOW 2.0` (currently v18.03.1) and `Albacore` (currently v2.3.1) appropriate to the system being used. Follow the `Installation guide` for each package.
+
 
