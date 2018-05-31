@@ -51,6 +51,15 @@ Data hosting provided by MRC CLIMB.
 
 [artic/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5](https://artic.s3.climb.ac.uk/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5) [20.5Gb]
 
+## Credits
+
+   - Babak Afrough (Public Health England) for sample preparation, and laboratory and bioinformatics assistance
+   - Luke Meredith (Public Health England) for sequencing library preparation
+
+## Acknowledgements
+
+We are grateful to Miles Carroll, Steve Pullan, Richard Vipond and Roger Hewson (Public Health England)
+for assistance with this validation project.
 
 {% include icon-callout.html
 type='default'
