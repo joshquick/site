@@ -22,23 +22,23 @@ Pan-Ebola virus primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
 Ebola virus Nanopore sequencing kit-list:
-: Web: [http://artic.network/ebov/ebov-seq-kit-1.0.0.html](/ebov/ebov-seq-kit.html)
+: Web: [http://artic.network/ebov/ebov-seq-kit.html](/ebov/ebov-seq-kit.html)
 : PDF: [ARTIC-EBOV-seqKit-v1.0.0.pdf](/files/ARTIC-EBOV-seqKit-v1.0.0.pdf)
 
 Ebola virus Nanopore sequencing protocol:
-: Web: [http://artic.network/ebov/ebov-seq-sop-1.0.0.html](/ebov/ebov-seq-sop.html)
+: Web: [http://artic.network/ebov/ebov-seq-sop.html](/ebov/ebov-seq-sop.html)
 : PDF: [ARTIC-EBOV-seqSOP-v1.0.0.pdf](/files/ARTIC-EBOV-seqSOP-v1.0.0.pdf)
 
 Setting up the laptop computing environment using Conda:
-: Web: [http://artic.network/ebov/ebov-it-setup-1.0.0.html](/ebov/ebov-it-setup.html)
+: Web: [http://artic.network/ebov/ebov-it-setup.html](/ebov/ebov-it-setup.html)
 <!-- : PDF: --> 
 
 Ebola virus Nanopore bioinformatics protocol:
-: Web: [http://artic.network/ebov/ebov-bioinformatics-sop-1.0.0.html](/ebov/ebov-bioinformatics-sop.html)
+: Web: [http://artic.network/ebov/ebov-bioinformatics-sop.html](/ebov/ebov-bioinformatics-sop.html)
 <!-- : PDF: --> 
 
 Phylogenetic analysis and visualization:
-: Web: [http://artic.network/ebov/ebov-phylogenetics-sop-1.0.0.html](/ebov/ebov-phylogenetics-sop.html)
+: Web: [http://artic.network/ebov/ebov-phylogenetics-sop.html](/ebov/ebov-phylogenetics-sop.html)
 <!-- : PDF: --> 
 
 ### Data
