@@ -85,7 +85,14 @@ Use [MUSCLE](http://www.drive5.com/muscle/) multiple alignment software to align
 muscle -profile -in1 ebov-reference-genomes-35.fasta -in2 new_genomes.fasta -fastaout aligned.afa
 ```
 
-This methods keeps the existing alignment and pair-wise aligns the new sequence to it. This is much quicker than doing a full multiple alignment but could be problematic if the new genome is divergent from all the reference genomes.  
+This methods keeps the existing alignment and pair-wise aligns the new sequence to it.   
+
+> **Note:** The `profile` option is much quicker than doing a full multiple alignment but could be problematic if the new genome is divergent from all the reference genomes. It may be worth doing a full re-alignment.
+ 
+- Optional step -- To re-align an existing alignment:
+```
+muscle -in aligned.afa -out re-aligned.afa -refine
+```
 
 ## Inferring a phylogenetic tree
 
