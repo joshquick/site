@@ -50,7 +50,7 @@ source activate artic
 Install the phylogenetics packages required:
 
 ```
-conda install muscle phyml ete3
+conda install muscle phyml gotree ete3
 ```
 
 ### Reference genomes
@@ -82,31 +82,37 @@ muscle -in unaligned.fasta -fastaout aligned.afa -htmlout aligned.html
 Use [MUSCLE](http://www.drive5.com/muscle/) multiple alignment software to align the new genome consensus sequences to the existing reference genome alignment:
 
 ```
-muscle -profile -in1 ebov-reference-genomes-35.fasta -in2 new_genomes.fasta -fastaout new_alignment.afa
+muscle -profile -in1 ebov-reference-genomes-35.fasta -in2 new_genomes.fasta -fastaout aligned.afa
 ```
 
 This methods keeps the existing alignment and pair-wise aligns the new sequence to it. This is much quicker than doing a full multiple alignment but could be problematic if the new genome is divergent from all the reference genomes.  
 
 ## Inferring a phylogenetic tree
 
-We will infer a phylogenetic tree using maximum likelihood with [PhyML](http://www.atgc-montpellier.fr/phyml/). This program uses the PHYLIP alignment format and we can use a Python script to convert the FASTA alignment:
+We will infer a phylogenetic tree using maximum likelihood (ML) with [PhyML](http://www.atgc-montpellier.fr/phyml/). This program uses the PHYLIP alignment format and we can use the [Goalign](https://github.com/fredericlemoine/goalign) utility to convert from FASTA format:
  
 ```
-fasta-phylip.py new_alignment.afa new_alignment.phy
+goalign reformat phylip -i aligned.afa > aligned.phy
 ```
 
 Then build the tree. This will use the default nucleotide model (HKY with gamma distributed site rate heterogeneity):
 
 ```
-phyml --input new_alignment.phy --datatype nt
+phyml --input aligned.phy --datatype nt
 ```
    
-The output goes into two files: `new_alignment.phy_phyml_stats.txt` provides all the estimated parameter values and other information, `aligned.phy_phyml_tree.txt` is the resulting tree in NEWICK format. 
+The output goes into two files: `aligned.phy_phyml_stats.txt` provides all the estimated parameter values and other information, `aligned.phy_phyml_tree.txt` is the resulting tree in NEWICK format. 
+
+By default an ML tree is arbitrarily rooted so to help with the interpretation of the tree, so use the [Gotree](https://github.com/fredericlemoine/gotree) utility to re-root the tree so the 1970s viruses are at the root:
+
+```
+gotree reroot outgroup -i aligned.phy_phyml_tree.txt 'KC242791|Bonduni|DRC|1977' 'KC242801|deRoover|DRC|1976' 'KM655246|Yambuku-Ecran|DRC|1976' > rooted.tree
+```
 
 [ETE3](http://etetoolkit.org/documentation/tools/) can be used to open a window to view the resulting tree:
 
 ```
-ete3 view -t aligned.phy_phyml_tree.txt
+ete3 view -t rooted.tree
 ```
 
 <div class="pagebreak"> </div>
