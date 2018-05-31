@@ -35,6 +35,10 @@ This validation acted as a test of our recently published standard operating pro
 
 ## Results
 
+Consensus sequences for 30 minute run:
+
+[/artic/ebov-consensus-30m.fasta](https://artic.s3.climb.ac.uk/ebov-consensus-30m.fasta)
+
 ## Data availability
 
 Data hosting provided by MRC CLIMB.
