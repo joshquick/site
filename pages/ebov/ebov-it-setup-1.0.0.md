@@ -4,11 +4,12 @@ keywords: protocol
 layout: document
 last_updated: May 18, 2018
 tags: [protocol] 
-permalink: ebov/ebov-it-setup-1.0.0.html
+permalink: ebov/ebov-it-setup.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 
 author: Nick Loman, Andrew Rambaut
@@ -87,7 +88,7 @@ Activate the ARTIC environment:
 source activate artic
 ```
 
-Install the software packages required:
+Install the software packages required (the packages needed are listed in the individual protocols documents):
 
 ```
 conda install -y [list of software packages]  

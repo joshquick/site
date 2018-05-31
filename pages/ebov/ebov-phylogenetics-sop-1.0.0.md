@@ -5,11 +5,12 @@ layout: document
 last_updated: May 18, 2018
 tags: [protocol]
 summary:
-permalink: ebov/ebov-phylogenetics-sop-1.0.0.html
+permalink: ebov/ebov-phylogenetics-sop.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-phylogeneticsSOP-v1.0.0"
+version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 
 author: Andrew Rambaut, Philippe Lemey
@@ -34,7 +35,9 @@ This document is part of the Ebola virus Nanopore sequencing protocol package:
 
 ## Preparation
 
-Set up the computing environment as described here in this document: [ebov-it-setup-1.0.0](ebov-it-setup-1.0.0.html)
+Set up the computing environment as described in this document: [ebov-it-setup-1.0.0](ebov-it-setup.html)
+
+This protocol also assumes that the setup and installation of the bioinformatics protocol has been performed as described in this document: [ebov-bioinformatics-sop-1.0.0](ebov-bioinformatics-sop.html) .
 
 ### Installing software
 
