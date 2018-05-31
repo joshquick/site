@@ -1,15 +1,16 @@
 ---
-title: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+title: "Ebola virus Nanopore sequencing bioinformatics protocol | amplicon, native barcoding"
 keywords: protocol
 layout: document
 last_updated: May 18, 2018
 tags: [protocol]
 summary:
-permalink: ebov/ebov-bioinformatics-sop-1.0.0.html
+permalink: ebov/ebov-bioinformatics-sop.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+document_name: "ARTIC-EBOV-bioinformaticsSOP"
+version: v1.0.0
 creation_date: 2018-05-26
 revision_date: 
 forked_from: 
@@ -35,7 +36,7 @@ This document is part of the Ebola virus Nanopore sequencing protocol package:
 
 ## Preparation
 
-Set up the computing environment as described here in this document: [ebov-it-setup-1.0.0](ebov-it-setup-1.0.0.html)
+Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html)
 
 ### Installing software
 
@@ -48,7 +49,7 @@ source activate artic
 Install the bioinformatics packages required:
 
 ```
-conda install -y conda install bwa samtools biopython nanopolish porechop pandas
+conda install -y bwa samtools biopython nanopolish porechop pandas
 ```
 
 Install the Artic pipeline:
@@ -73,7 +74,7 @@ git clone https://github.com/artic-network/primer-schemes.git
 Run Albacore on the new run folder:
 
 ```
-read_fast5_basecaller -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
+read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
 ````
 
 You need to substitute `/path/to/reads` to the directory where the FAST5 files from your
@@ -82,6 +83,8 @@ run are. Common locations are:
    - Mac: ```/Library/MinKNOW/data/reads/run_name```
    - Linux: ```/var/lib/MinKNOW/data/reads```
    - Windows ```c:/data/reads```
+
+### Consensus sequence generation
 
 Gather up the FASTQ output from Albacore:
 

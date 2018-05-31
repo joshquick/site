@@ -1,14 +1,15 @@
 ---
-title: "ARTIC-EBOV-itSetup-v1.0.0 | Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
+title: "Ebola virus Nanopore sequencing protocol | amplicon, native barcoding"
 keywords: protocol
 layout: document
 last_updated: May 18, 2018
 tags: [protocol] 
-permalink: ebov/ebov-it-setup-1.0.0.html
+permalink: ebov/ebov-it-setup.html
 folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP-v1.0.0"
+document_name: "ARTIC-EBOV-bioinformaticsSOP"
+version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 
 author: Nick Loman, Andrew Rambaut
@@ -87,18 +88,17 @@ Activate the ARTIC environment:
 source activate artic
 ```
 
-Install the bioinformatics packages required:
+Install the software packages required (the packages needed are listed in the individual protocols documents):
 
 ```
-conda install [list of software packages]  
+conda install -y [list of software packages]  
 ```
 
-Install the phylogenetics packages required:
+### Installing Oxford Nanopore MinKNOW and Albacore
 
-```
-conda install muscle phyml  
-```
+The software for running the MinION and basecalling can be downloaded from the [Oxford Nanopore Technologies Community site](https://community.nanoporetech.com). Log in to find the `Software Downloads` button. Download `MinKNOW 2.0` (currently v18.03.1) and `Albacore` (currently v2.3.1) appropriate to the system being used. Follow the `Installation guide` for each package.
 
-### Installing Oxford Nanopore MinKNOW
+MinKNOW is a graphical user-interface programme that will be installed in the application area of the system.
 
+Python 3 is needed to both install and run Albacore but is installed by Conda if not already on your machine. Access to Albacore is through an excutable Python script called `read_fast5_basecaller.py` that will be installed in a directory on the path such as `/usr/loca/bin/`.
 
