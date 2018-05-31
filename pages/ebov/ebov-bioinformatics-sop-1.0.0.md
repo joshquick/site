@@ -48,7 +48,7 @@ source activate artic
 Install the bioinformatics packages required:
 
 ```
-conda install -y conda install bwa samtools biopython nanopolish porechop
+conda install -y conda install bwa samtools biopython nanopolish porechop pandas
 ```
 
 Install the Artic pipeline:
@@ -68,7 +68,7 @@ git clone https://github.com/artic-network/primer-schemes.git
 <div class="pagebreak"> </div>
 ## Nanopore Bioinformatics
 
-### Basecalling with Albacore
+### Basecalling with Albacore (MinION on laptop)
 
 Run Albacore on the new run folder:
 
@@ -79,37 +79,69 @@ read_fast5_basecaller -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o 
 You need to substitute `/path/to/reads` to the directory where the FAST5 files from your
 run are. Common locations are:
 
-Mac: ```/Library/MinKNOW/data/reads/run_name```
-Linux: ```/var/lib/MinKNOW/data/reads```
-Windows ```/c/data/reads```
-
-### Consensus sequence generation
+   - Mac: ```/Library/MinKNOW/data/reads/run_name```
+   - Linux: ```/var/lib/MinKNOW/data/reads```
+   - Windows ```c:/data/reads```
 
 Gather up the FASTQ output from Albacore:
 
 ```
-artic gather --min-length 400 --max-length 700 output_directory
+artic gather --min-length 400 --max-length 700 --prefix run_name output_directory
 ```
 
-You will now have a number of files labeled:
+We use a length filter here of between 400 and 700 to remove obviously chimeric reads.
+
+### Basecalling using MinIT or GridION
+
+If running on MinIT or GridION and you have used Guppy to basecall through Dogfish, instead you can do:
 
 ```
-run_name_barcode01.fastq
-run_name_barcode02.fastq
-..
+artic gather --guppy --min-length 400 --max-length 700 --prefix run_name /data/basecalled/path/to/reads
+```
+
+You will now have a file called: ``run_name_all.fastq``
+and a file called ``run_name_sequencing_summary.txt``, 
+as well as individual files for each barcode (if previously demultiplexed).
+
+### Demultiplex with Porechop with stringent settings
+
+This stage is obligatory, even if you have already demultiplexed with Albacore, due to
+significant barcoding misassignments that can confound results:
+
+```
+artic demultiplex --threads 4 --prefix run_name_final run_name_all.fastq
+```
+
+Now you will have new files called:
+
+```
+run_name_final_BC01.fastq
+run_name_final_BC02.fastq
+run_name_final_BC03.fastq
 ```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
 
 ```
-nanopolish index -s run_name/sequencing_summary.txt -d /path/to/reads run_name_all.fastq
+nanopolish index -s run_name_sequencing_summary.txt -d /path/to/reads run_name_all.fastq
 ```
+
+Again, alter ``/path/to/reads`` to point to the original location of the FAST5 files.
 
 ## Run the MinION pipeline
 
 For each barcode you wish to process:
 
 ```
-artic minion --normalise 200 --threads 4 --scheme-directory primer-schemes --read-file run_name_barcode01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 barcode01_samplename
+artic minion --normalise 200 --threads 4 --scheme-directory primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
 ```
+
+Replace ``samplename`` as appropriate:
+
+## Output files
+
+   * ``samplename.primertrimmed.bam`` - BAM file for visualisation after primer-binding site trimming
+   * ``samplename.vcf`` - detected variants in VCF format
+   * ``samplename.variants.tab`` - detected variants
+   * ``samplename.consensus.fasta`` - consensus sequence
 
