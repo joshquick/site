@@ -73,7 +73,7 @@ git clone https://github.com/artic-network/primer-schemes.git
 Run Albacore on the new run folder:
 
 ```
-read_fast5_basecaller -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
+read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
 ````
 
 You need to substitute `/path/to/reads` to the directory where the FAST5 files from your
