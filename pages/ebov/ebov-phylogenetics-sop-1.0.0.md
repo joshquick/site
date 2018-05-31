@@ -61,23 +61,11 @@ An alignment of 35 complete or nearly-complete genomes spaning 1976-2014 is avai
 
 This is a FASTA format file which contains a multiple alignment of the 35 genomes. 
 
+### Test data
+
+To test these instructions you can find a synthetic genome in the ARTIC repository. This file, called `fake_ebola_genome.fasta` is an artificial genome sequence constructed to fall within the diversity of the 35 provided reference genomes to simulate the discovery of a new lineage of EBOV. This is for testing only and shouldn't be included in any analyses.  
+
 ## Building a multiple alignment
-
-<!--
-Merge the EBOV genome reference sequence file with the new consensus sequence:
-
-```
-cat new_consensus.fasta ebov-reference-genomes-35.fasta > unaligned.fasta
-```
-
-Use [MUSCLE](http://www.drive5.com/muscle/) multiple alignment software to align the genomes:
-
-```
-muscle -in unaligned.fasta -fastaout aligned.afa -htmlout aligned.html
-```
-
-> **Note:** With many sequences this step may become quite slow. There are faster, more approximate ways of doing this - i.e., using MUSCLE's feature for adding a sequence to an existing alignment.
--->
 
 Use [MUSCLE](http://www.drive5.com/muscle/) multiple alignment software to align the new genome consensus sequences to the existing reference genome alignment:
 
@@ -121,7 +109,4 @@ gotree reroot outgroup -i aligned.phy_phyml_tree.txt 'KC242791|Bonduni|DRC|1977'
 ```
 ete3 view -t rooted.tree
 ```
-
-<div class="pagebreak"> </div>
-## Phylogenetic analysis
 
