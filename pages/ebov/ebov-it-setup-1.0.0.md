@@ -100,5 +100,5 @@ The software for running the MinION and basecalling can be downloaded from the [
 
 MinKNOW is a graphical user-interface programme that will be installed in the application area of the system.
 
-Python 3 is needed to both install and run Albacore but is installed by Conda if not already on your machine. Access to Albacore is through an excutable Python script called `read_fast5_basecaller.py` that will be installed in a directory on the path such as `/usr/loca/bin/`.
+Python 3 is needed to both install and run Albacore but is installed by Conda if not already on your machine. Access to Albacore is through an excutable Python script called `read_fast5_basecaller.py` that will be installed in a directory on the path such as `/usr/local/bin/`.
 

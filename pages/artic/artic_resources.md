@@ -10,7 +10,14 @@ toc: true
 folder: artic
 ---
 
-## Tools
+### Virus specific resources
+
+[Ebola virus sequencing resources](/ebov)
+: > A collection of resources and documents for the genome sequencing of Ebola virus (EBOV) using Oxford Nanopore Technology's MinION platform. Includes a tiled primer scheme, complete lab protocol & equipement/reagent list.
+: Primer schemes, protocols and reagent/equipment list for mobile sequencing of Ebola virus using Oxford Nanopore Technology's MinION platform.
+
+<br />
+### Tools
 
 {% include icon-callout.html
 type='default'
@@ -20,13 +27,6 @@ width='17%'
 title='<a href="http://primal.zibraproject.org">Primal Scheme</a>'
 subtitle='Web-based tool for designing multiplex PCR primers for generating tiling amplicons'
 %}
-
-<hr />
-
-## Virus specific resources
-
-[Ebola virus sequencing resources](/ebov)
-: Primer schemes, protocols and reagent/equipment list for mobile sequencing of Ebola virus using Oxford Nanopore Technology's MinION platform.
 
 <br /><br />
 
