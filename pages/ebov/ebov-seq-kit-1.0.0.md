@@ -23,6 +23,9 @@ type='default'
 content='**Overview:** The following protocol is adapted from the methods of [Quick et al. (2017) *Nature Protocols* **12:** 1261–1276 doi:10.1038/nprot.2017.066](http://doi.org/10.1038/nprot.2017.066) and covers primers, amplicon preparation and clean-up, then uses a single-tube protocol to barcode and adaptor ligate the library, before running minION.'
 %}
 
+This document is part of the Ebola virus Nanopore sequencing protocol package:
+: [http://artic.network/ebov/](http://artic.network/ebov/)
+
 Ebola primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 

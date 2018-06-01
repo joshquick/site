@@ -25,6 +25,9 @@ content='**Overview:** The following protocol is adapted from the methods of [Qu
 
 <br />
 
+This document is part of the Ebola virus Nanopore sequencing protocol package:
+: [http://artic.network/ebov/](http://artic.network/ebov/)
+
 Ebola primer scheme:
 : [https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2](https://github.com/artic-network/primer-schemes/tree/master/ZaireEbola/V2) 
 
