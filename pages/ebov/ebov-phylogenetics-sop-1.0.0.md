@@ -7,7 +7,7 @@ tags: [protocol]
 summary:
 permalink: ebov/ebov-phylogenetics-sop.html
 folder: ebov
-title_text: "Ebola virus bioinformatics protocol"
+title_text: "Ebola virus phylogenetic analysis protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-phylogeneticsSOP"
 version: v1.0.0
@@ -19,13 +19,24 @@ citation: "Loman *et al.* In Prep."
 
 {% include callout.html
 type='default'
-content='**Overview:** '
+content='**Overview:** An analysis protocol for an initial phylogenetic analysis of consensus genomes. Includes alignment, phylogeny estimation and visualization.'
 %}
 
 <br />
 
 This document is part of the Ebola virus Nanopore sequencing protocol package:
 : [http://artic.network/ebov/](http://artic.network/ebov/)
+
+#### Related documents:
+
+Ebola virus Nanopore sequencing protocol:
+: [http://artic.network/ebov/ebov-seq-sop.html](/ebov/ebov-seq-sop.html)
+
+Setting up the laptop computing environment using Conda:
+: [http://artic.network/ebov/ebov-it-setup.html](http://artic.network/ebov/ebov-it-setup.html)
+
+Ebola virus Nanopore bioinformatics protocol:
+: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
 
 <br /><br /><br />
 
@@ -43,14 +54,14 @@ This protocol also assumes that the setup and installation of the bioinformatics
 
 Activate the ARTIC Conda environment:
 
-```
+```bash
 source activate artic
 ```
 
-Install the phylogenetics packages required:
+If not already done, install the phylogenetics packages required:
 
-```
-conda install muscle phyml gotree ete3
+```bash
+conda install -y muscle phyml goalign gotree ete3
 ```
 
 ### Reference genomes
@@ -69,7 +80,7 @@ To test these instructions you can find a synthetic genome in the ARTIC reposito
 
 Use [MUSCLE](http://www.drive5.com/muscle/) multiple alignment software to align the new genome consensus sequences to the existing reference genome alignment:
 
-```
+```bash
 muscle -profile -in1 ebov-reference-genomes-35.fasta -in2 new_genomes.fasta -fastaout aligned.afa
 ```
 
@@ -78,7 +89,7 @@ This methods keeps the existing alignment and pair-wise aligns the new sequence 
 > **Note:** The `profile` option is much quicker than doing a full multiple alignment but could be problematic if the new genome is divergent from all the reference genomes. It may be worth doing a full re-alignment.
  
 - Optional step -- To re-align an existing alignment:
-```
+```bash
 muscle -in aligned.afa -out re-aligned.afa -refine
 ```
 
@@ -86,13 +97,13 @@ muscle -in aligned.afa -out re-aligned.afa -refine
 
 We will infer a phylogenetic tree using maximum likelihood (ML) with [PhyML](http://www.atgc-montpellier.fr/phyml/). This program uses the PHYLIP alignment format and we can use the [Goalign](https://github.com/fredericlemoine/goalign) utility to convert from FASTA format:
  
-```
+```bash
 goalign reformat phylip -i aligned.afa > aligned.phy
 ```
 
 Then build the tree. This will use the default nucleotide model (HKY with gamma distributed site rate heterogeneity):
 
-```
+```bash
 phyml --input aligned.phy --datatype nt
 ```
    
@@ -100,13 +111,13 @@ The output goes into two files: `aligned.phy_phyml_stats.txt` provides all the e
 
 By default an ML tree is arbitrarily rooted so to help with the interpretation of the tree, so use the [Gotree](https://github.com/fredericlemoine/gotree) utility to re-root the tree so the 1970s viruses are at the root:
 
-```
-gotree reroot outgroup -i aligned.phy_phyml_tree.txt 'KC242791|Bonduni|DRC|1977' 'KC242801|deRoover|DRC|1976' 'KM655246|Yambuku-Ecran|DRC|1976' > rooted.tree
+```bash
+gotree reroot outgroup -i aligned.phy_phyml_tree.txt 'KC242791|Bonduni|DRC|1977-06' 'KC242801|deRoover|DRC|1976' 'KM655246|Yambuku-Ecran|DRC|1976' > rooted.tree
 ```
 
 [ETE3](http://etetoolkit.org/documentation/tools/) can be used to open a window to view the resulting tree:
 
-```
+```bash
 ete3 view -t rooted.tree
 ```
 

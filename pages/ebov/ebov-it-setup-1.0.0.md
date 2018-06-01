@@ -26,6 +26,15 @@ content='**Overview:** Instructions for setting up the laptop computing environm
 This document is part of the Ebola virus Nanopore sequencing protocol package:
 : [http://artic.network/ebov/](http://artic.network/ebov/)
 
+#### Related documents:
+
+Ebola virus Nanopore bioinformatics protocol:
+: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+
+Ebola virus Nanopore bioinformatics protocol:
+: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+
+
 <br /><br /><br />
 
 {% include wellcome-trust.html %}
@@ -57,14 +66,14 @@ For Conda installation instructions for your operating system go to: [https://co
 
 First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
 
-```
+```bash
 conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
 
 Create an custom environment for running software and install the packages:
   
-```
+```bash
 conda create -n artic
 ```
 
@@ -76,7 +85,7 @@ source activate artic
 
 and then deactivate it again using this:
 
-```
+```bash
 source deactivate
 ```
 
@@ -84,13 +93,13 @@ source deactivate
 
 Activate the ARTIC environment:
 
-```
+```bash
 source activate artic
 ```
 
 Install the software packages required (the packages needed are listed in the individual protocols documents):
 
-```
+```bash
 conda install -y [list of software packages]  
 ```
 
