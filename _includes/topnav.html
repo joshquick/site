@@ -12,9 +12,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-				<li><a class="fa fa-home" href="index.html">&nbsp;</a></li>
+				<li><a class="fa fa-home" href="/"></a></li>
                 <!-- toggle sidebar button -->
-                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa {% if page.hide_sidebar %}fa-toggle-off{% else %}fa-toggle-on{% endif %}"></i> Nav</a></li>
                 <!-- entries without drop-downs appear here -->
 
 {% assign topnav = site.data[page.topnav] %}
@@ -25,9 +25,9 @@
                 {% if item.external_url %}
                 <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
                 {% elsif page.url contains item.url %}
-                <li class="active"><a href="{{item.url | remove: "/"}}">{{item.title}}</a></li>
+                <li class="active"><a href="{{item.url}}">{{item.title}}</a></li>
                 {% else %}
-                <li><a href="{{item.url | remove: "/"}}">{{item.title}}</a></li>
+                <li><a href="{{item.url}}">{{item.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
@@ -42,9 +42,9 @@
                         {% if folderitem.external_url %}
                         <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
                         {% elsif page.url contains folderitem.url %}
-                        <li class="dropdownActive"><a href="{{folderitem.url |  remove: "/"}}">{{folderitem.title}}</a></li>
+                        <li class="dropdownActive"><a href="{{folderitem.url}}">{{folderitem.title}}</a></li>
                         {% else %}
-                        <li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+                        <li><a href="{{folderitem.url}}">{{folderitem.title}}</a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
