@@ -1,23 +1,24 @@
-{% assign protocol = site.data.protocols[include.sop] %}
+{% assign protocol = site.data.protocols[include.protocol] %}
 
-<h2>Equipment list</h2>
-File: {{ include.sop }}
-
-{% for entry in equipment.categories %}
-<h2>{{ entry.category_name }}</h2>
-<ul id="equipment" class="list">
+<h2>Requirements</h2>
+{% for entry in protocol.requirements %}
+<h4>{{ entry.category_name }}</h4>
+<ul class="list">
     {% for item in entry.items %}
     <li class="item">
-        {{item.name}}
-        <ul class="sublist">
-            <li class="field">Cat No.: {{item.catalog}}</li>
-            <li class="field">Supplier: {{item.supplier}}</li>
-            <li class="field">Cost: {{item.cost}}</li>
-            <li class="field">Number of reactions: {{item.reactions}}</li>
-            <li class="field">Number required: {{item.required}}</li>
-            <li class="field">Rationale: {{item.rationale}}</li>
-        </ul>
+        {{item.name}} x {{item.required}}
     </li>
     {% endfor %}
 </ul>
+{% endfor %}
+
+<h2>Protocol</h2>
+
+{% for section in protocol.protocol.sections %}
+<h3>{{ section.title }}</h3>
+<p>{{ section.description }}</p>
+<blockquote>{{ section.note }}</blockquote>
+{% for step in section.steps %}
+1. {{ step.step }}
+{% endfor %}
 {% endfor %}
