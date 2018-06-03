@@ -97,10 +97,26 @@ Activate the ARTIC environment:
 source activate artic
 ```
 
-Install the software packages required (the packages needed are listed in the individual protocols documents):
+Install the external software packages required for the bioinformatics protocol and the phylogenetics:
 
 ```bash
-conda install -y [list of software packages]  
+conda install -y bwa samtools biopython nanopolish porechop pandas  
+conda install -y muscle phyml goalign gotree ete3
+```
+
+Install the ARTIC Ebola virus data and software repository:
+
+```bash
+git clone --recursive https://github.com/artic-network/artic-ebov.git
+```
+
+Install the ARTIC pipeline:
+
+```bash
+cd artic-ebov/fieldbioinformatics
+python setup.py install
+export PATH=$PATH:`pwd`/artic
+cd ../..
 ```
 
 ### Installing Oxford Nanopore MinKNOW and Albacore

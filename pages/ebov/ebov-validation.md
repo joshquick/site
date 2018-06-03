@@ -55,7 +55,7 @@ Data hosting provided by MRC CLIMB.
 ## Credits
 
    - Babak Afrough (Public Health England) for sample preparation, and laboratory and bioinformatics assistance
-   - Luke Meredith (Public Health England) for sequencing library preparation
+   - Luke Meredith (University of Cambridge) for sequencing library preparation
 
 ## Acknowledgements
 
