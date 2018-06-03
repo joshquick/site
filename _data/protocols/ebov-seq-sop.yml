@@ -63,28 +63,26 @@ requirements:
 protocol:
    sections:
      - title: "Part 1: cDNA synthesis with Superscript IV Vilo cDNA kit"
-       description: ""
+       head: ""
        note: "**NOTE ON HOOD PREPARATION:** To prevent cross contamination of both the sample and other reagents, this should be carried out in the SAMPLE PREPARATION HOOD, which is pre-sterilised with UV and treated with MediPal wipes, DNAway and RNAseZap reagent. Wipe down the hood with each sequentially, allowing 5 minutes for drying between each. Pipettes should also be treated in the same way, and UV treated for 30 mins between library preparations."
        steps:
          - step: "Recommend aliquoting the Vilo mastermix, to prevent cross contamination and to reduce potential freeze/thaw cycles."
          - step: "Set up the following reaction:"
-           table: "
-               |---|---
-               |2x Vilo Master Mix | 5&micro;L
-               |viral RNA | 5&micro;L
-               |TOTAL | 10&micro;L
-             "
+           table:
+             - row: "|---|---"
+             - row: "|2x Vilo Master Mix | 5&micro;L"
+             - row: "|viral RNA | 5&micro;L"
+             - row: "|TOTAL | 10&micro;L"
            note: "NOTE: Viral RNA input from a clinical sample should be between Ct 18-35. If Ct is between 12-15, then dilute the sample 100-fold in water, if between 15-18 then dilute 10-fold in water. This will reduce the likelihood of PCR-inhibition."
 
          - step: "Gently mix (avoid vortexing) then pulse spin the tube to ensure maximum contact with the thermal cycler."
          - step: "Incubate the reaction as follows:"
-           table: "
-             |---|---|---
-             | Primer annealing | 25&deg;C | 20 mins
-             | Extension | 50&deg;C | 30 mins
-             | Inactivation | 85&deg;C | 10 mins
-             "
-         - step: "cDNA is now ready for amplicon generation."
+           table:
+             - row: "|---|---|---"
+             - row: "| Primer annealing | 25&deg;C | 20 mins"
+             - row: "| Extension | 50&deg;C | 30 mins"
+             - row: "| Inactivation | 85&deg;C | 10 mins"
+       foot: "cDNA is now ready for amplicon generation."
 
 
 

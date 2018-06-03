@@ -16,9 +16,19 @@
 
 {% for section in protocol.protocol.sections %}
 <h3>{{ section.title }}</h3>
-<p>{{ section.description }}</p>
-<blockquote>{{ section.note }}</blockquote>
+{% if section.head %}<p>{{ section.head }}</p>{% endif %}
+{% if section.note %}<blockquote>{{ section.note }}</blockquote>{% endif %}
 {% for step in section.steps %}
 1. {{ step.step }}
+
+   {% if step.table %}
+   {% for row in step.table %}
+   {{ row.row }}
+   {% endfor %}
+   {% endif %}
+
+   {% if step.note %}<blockquote>{{ step.note }}</blockquote>{% endif %}
+
 {% endfor %}
+{% if section.foot %}<p>{{ section.foot }}</p>{% endif %}
 {% endfor %}
