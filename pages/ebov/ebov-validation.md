@@ -6,6 +6,7 @@ tags: [ebov]
 sidebar: artic_sidebar
 permalink: ebov/ebov-validation.html
 toc: false
+hide_sidebar: true
 folder: ebov
 ---
 
