@@ -58,12 +58,34 @@ These protocols instructions assume a 64-bit UNIX, Linux or similar environment.
 
 The steps in this document should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics and phylogenetics protocols can be performed largely off-line. 
 
+### Installing ARTIC Ebola virus specific data and software
+
+Install the ARTIC Ebola virus data and software repository:
+
+```bash
+git clone --recursive https://github.com/artic-network/artic-ebov.git
+cd ../primer-schemes
+git checkout master
+cd artic-network/fieldbioinformatics
+git checkout master
+python setup.py install
+export PATH=$PATH:`pwd`/artic
+cd ../..
+```
+
 ### Conda
 
 Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
  
 For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
 
+Create an custom environment for running software and install the packages:
+
+```bash
+conda env create -f artic-ebov/environment.yml
+```
+
+<!-- No longer necessary given environment yml file.
 First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
 
 ```bash
@@ -76,6 +98,7 @@ Create an custom environment for running software and install the packages:
 ```bash
 conda create -n artic
 ```
+-->
 
 Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate the environment: 
 
@@ -95,6 +118,7 @@ The artic environment can be removed using this:
 conda remove --name artic --all
 ```
 
+<!-- No longer necessary given environment yml file.
 ### Installing software
 
 Activate the ARTIC environment:
@@ -109,19 +133,7 @@ Install the external software packages required for the bioinformatics protocol 
 conda install -y bwa samtools biopython nanopolish porechop pandas  
 conda install -y muscle phyml goalign gotree ete3
 ```
-
-Install the ARTIC Ebola virus data and software repository:
-
-```bash
-git clone --recursive https://github.com/artic-network/artic-ebov.git
-cd ../primer-schemes
-git checkout master
-cd artic-network/fieldbioinformatics
-git checkout master
-python setup.py install
-export PATH=$PATH:`pwd`/artic
-cd ../..
-```
+-->
 
 ### Installing Oxford Nanopore MinKNOW and Albacore
 
