@@ -49,7 +49,8 @@ Phylogenetic analysis and visualization:
 
 ## Preparation
 
-Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html).
+Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html). This should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics can be performed largely off-line. 
+
 
 <!-- This is all now done off-line in the setup document
 ### Installing software
