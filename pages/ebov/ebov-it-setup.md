@@ -29,10 +29,10 @@ This document is part of the Ebola virus Nanopore sequencing protocol package:
 #### Related documents:
 
 Ebola virus Nanopore bioinformatics protocol:
-: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
-
-Ebola virus Nanopore bioinformatics protocol:
 : [http://artic.network/ebov/ebov-bioinformatics-sop.html](http://artic.network/ebov/ebov-bioinformatics-sop.html)
+
+Phylogenetic analysis and visualization:
+: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
 
 
 <br /><br /><br />
