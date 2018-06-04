@@ -41,15 +41,15 @@ sequences in context:
 
 ### Mayinga strain
 
-![Mayinga tree][/images/ebov-validation/Mayinga-tree.png)
+![Mayinga tree](/images/ebov-validation/Mayinga-tree.png)
 
 ### Makona strain
 
-![Makona tree][/images/ebov-validation/Makona-tree.png)
+![Makona tree](/images/ebov-validation/Makona-tree.png)
 
 ### Kikwit strain
 
-![Kikwit tree][/images/ebov-validation/Kikwit-tree.png)
+![Kikwit tree](/images/ebov-validation/Kikwit-tree.png)
 
 Consensus sequences for 2 hour run:
 
