@@ -57,7 +57,7 @@ Set up the computing environment as described here in this document: [ebov-it-se
 Activate the ARTIC environment:
 
 ```bash
-source activate artic
+source activate artic-ebov
 ```
 
 Install the bioinformatics packages required:
@@ -85,9 +85,15 @@ git clone https://github.com/artic-network/primer-schemes.git
 
 ## Nanopore Bioinformatics
 
+Activate the ARTIC environment:
+
+```bash
+source activate artic-ebov
+```
+
 ### Basecalling with Albacore (MinION on laptop)
 
-Run Albacore on the new run folder:
+Run the Albacore basecaller on the new MinION run folder:
 
 ```bash
 read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding

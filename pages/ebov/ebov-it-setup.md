@@ -64,10 +64,7 @@ Install the ARTIC Ebola virus data and software repository:
 
 ```bash
 git clone --recursive https://github.com/artic-network/artic-ebov.git
-cd ../primer-schemes
-git checkout master
 cd artic-network/fieldbioinformatics
-git checkout master
 python setup.py install
 export PATH=$PATH:`pwd`/artic
 cd ../..
@@ -96,14 +93,14 @@ conda config --add channels bioconda
 Create an custom environment for running software and install the packages:
   
 ```bash
-conda create -n artic
+conda create -n artic-ebov
 ```
 -->
 
 Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate the environment: 
 
 ```
-source activate artic
+source activate artic-ebov
 ```
 
 and then deactivate it again using this:
@@ -115,7 +112,7 @@ source deactivate
 The artic environment can be removed using this:
 
 ```bash
-conda remove --name artic --all
+conda remove --name artic-ebov --all
 ```
 
 <!-- No longer necessary given environment yml file.
