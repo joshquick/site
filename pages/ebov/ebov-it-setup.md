@@ -6,9 +6,9 @@ last_updated: May 18, 2018
 tags: [protocol] 
 permalink: ebov/ebov-it-setup.html
 folder: ebov
-title_text: "Ebola virus bioinformatics protocol"
+title_text: "Ebola virus bioinformatics environment setup"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP"
+document_name: "ARTIC-EBOV-ITSetup"
 version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 
@@ -58,31 +58,35 @@ These protocols instructions assume a 64-bit UNIX, Linux or similar environment.
 
 The steps in this document should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics and phylogenetics protocols can be performed largely off-line. 
 
+### Conda
+
+Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
+ 
+For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install. 
+
+> *NOTE:* Install the `64-bit Python 3.6` version of Miniconda
+
 ### Installing ARTIC Ebola virus specific data and software
 
 Install the ARTIC Ebola virus data and software repository:
 
 ```bash
 git clone --recursive https://github.com/artic-network/artic-ebov.git
+```
+
+Create a custom Conda environment for running software. This may take some time as it will install the required packages and all their dependencies.
+
+```bash
+conda env create -f artic-ebov/environment.yml
+```
+
+```bash
 cd artic-ebov/fieldbioinformatics
 python setup.py install
 export PATH=$PATH:`pwd`/artic
 cd ../..
 ```
 
-### Conda
-
-Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
- 
-For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
-
-> *NOTE:* Install the `64-bit Python 3.6` version of Miniconda
-
-Create an custom environment for running software and install the packages:
-
-```bash
-conda env create -f artic-ebov/environment.yml
-```
 
 <!-- No longer necessary given environment yml file.
 First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):

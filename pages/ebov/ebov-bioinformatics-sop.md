@@ -51,39 +51,6 @@ Phylogenetic analysis and visualization:
 
 Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html). This should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics can be performed largely off-line. 
 
-
-<!-- This is all now done off-line in the setup document
-### Installing software
-
-Activate the ARTIC environment:
-
-```bash
-source activate artic-ebov
-```
-
-Install the bioinformatics packages required:
-
-```bash
-conda install -y bwa samtools biopython nanopolish porechop pandas
-```
-
-Install the Artic pipeline:
-
-```bash
-git clone https://github.com/artic-network/fieldbioinformatics.git
-python fieldbioinformatics/setup.py install
-export PATH=$PATH:`pwd`/fieldbioinformatics/artic
-```
-
-Install the Artic primer schemes:
-
-```bash
-git clone https://github.com/artic-network/primer-schemes.git
-```
-
-<div class="pagebreak"> </div>
--->
-
 ## Nanopore Bioinformatics
 
 Activate the ARTIC environment:
