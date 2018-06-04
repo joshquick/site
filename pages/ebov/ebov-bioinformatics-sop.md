@@ -51,6 +51,7 @@ Phylogenetic analysis and visualization:
 
 Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html)
 
+<!-- This is all now done off-line in the setup document
 ### Installing software
 
 Activate the ARTIC environment:
@@ -80,6 +81,8 @@ git clone https://github.com/artic-network/primer-schemes.git
 ```
 
 <div class="pagebreak"> </div>
+-->
+
 ## Nanopore Bioinformatics
 
 ### Basecalling with Albacore (MinION on laptop)
