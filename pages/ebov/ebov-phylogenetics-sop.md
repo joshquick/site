@@ -36,7 +36,7 @@ Setting up the laptop computing environment using Conda:
 : [http://artic.network/ebov/ebov-it-setup.html](http://artic.network/ebov/ebov-it-setup.html)
 
 Ebola virus Nanopore bioinformatics protocol:
-: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+: [http://artic.network/ebov/ebov-bioinformatics-sop.html](http://artic.network/ebov/ebov-bioinformatics-sop.html)
 
 <br /><br /><br />
 

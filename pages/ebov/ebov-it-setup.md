@@ -32,7 +32,7 @@ Ebola virus Nanopore bioinformatics protocol:
 : [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
 
 Ebola virus Nanopore bioinformatics protocol:
-: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+: [http://artic.network/ebov/ebov-bioinformatics-sop.html](http://artic.network/ebov/ebov-bioinformatics-sop.html)
 
 
 <br /><br /><br />
@@ -87,6 +87,12 @@ and then deactivate it again using this:
 
 ```bash
 source deactivate
+```
+
+The artic environment can be removed using this:
+
+```bash
+conda remove --name artic --all
 ```
 
 ### Installing software
