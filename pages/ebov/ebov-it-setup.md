@@ -83,7 +83,6 @@ conda env create -f artic-ebov/environment.yml
 ```bash
 cd artic-ebov/fieldbioinformatics
 python setup.py install
-export PATH=$PATH:`pwd`/artic
 cd ../..
 ```
 
@@ -120,23 +119,6 @@ The artic environment can be removed using this:
 ```bash
 conda remove --name artic-ebov --all
 ```
-
-<!-- No longer necessary given environment yml file.
-### Installing software
-
-Activate the ARTIC environment:
-
-```bash
-source activate artic
-```
-
-Install the external software packages required for the bioinformatics protocol and the phylogenetics:
-
-```bash
-conda install -y bwa samtools biopython nanopolish porechop pandas  
-conda install -y muscle phyml goalign gotree ete3
-```
--->
 
 ### Installing Oxford Nanopore MinKNOW and Albacore
 
