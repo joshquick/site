@@ -1,0 +1,31 @@
+{% assign equipment = site.data.kit_lists[include.kit_list] %}
+
+{% for entry in equipment.categories %}
+<h3>{{ entry.category_name }}</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Supplier</th>
+        <th>Cat No.</th>
+        <th>Unit Cost</th>
+        <th># Req</th>
+        <th>Cost</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in entry.items %}
+    <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.supplier}}</td>
+        <td>{{item.catalog}}</td>
+        <td>{{item.unit_cost}}</td>
+        <td>{{item.required}}</td>
+        <td>{{item.cost}}</td>
+        <td><span class="checkbox">&nbsp;</span></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endfor %}

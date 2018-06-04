@@ -1,0 +1,88 @@
+title: SOP-3 Ebola Sequencing, Amplicon, native barcoding
+code: EBOV-seqSOP
+version: "1.0.0"
+requirements:
+   - category_name: "Equipment required:"
+     items:
+     - name: "Portable nucleic acid preparation hood or equivalent"
+       required: "2"
+     - name: "12V vortex"
+       required: "1"
+     - name: "Sprout® portable centrifuge"
+       required: "1"
+     - name: "1mL Eppendorf pipette"
+       required: "1"
+     - name: "0.1mL Eppendorf pipette"
+       required: "1"
+     - name: "0.01L Eppendorf pipette"
+       required: "1"
+     - name: "1.5mL/0.6mL convertible tube rack"
+       required: "1"
+     - name: "Qubit 4 Fluorometer (ThermoFisher™)"
+       required: "1"
+     - name: "miniPCR machine"
+       required: "1"
+     - name: "Heat block"
+       required: "1"
+     - name: "Magnetic rack"
+       required: "1"
+
+   - category_name: "Consumables required"
+     items:
+     - name: "Vilo SSIV RT 2x MasterMix"
+     - name: "Q5 Hotstart HF polymerase 2x Mastermix"
+     - name: "Ebola Zaire Primers V1"
+     - name: "NEBNext UltraII End-prep module"
+     - name: "NEBNext UltraII Ligase module"
+     - name: "NEBNext FFPE Repair module"
+     - name: "Agencourt AMPureXP Beads"
+     - name: "Nanopore Ligation Sequencing Kit 1D"
+     - name: "Nanopore Native Barcoding Expansion Kit"
+     - name: "Nanopore R9.4.1 Flow cells"
+     - name: "1.5mL eppendorf tubes"
+     - name: "0.2mL 8-strip tubes"
+     - name: "50mL transfer tubes"
+     - name: "Qubit Reaction Tubes"
+     - name: "Qubit 1x dsDNA HS Assay kit"
+     - name: "Nuclease-free water"
+     - name: "70% Ethanol"
+     - name: "1mL pipette tips"
+     - name: "0.1mL pipette tips"
+     - name: "0.01mL pipette tips"
+     - name: "Paper towelling"
+     - name: "Clinical waste sharps containers"
+
+   - category_name: "Safety, containment and contamination recommendations"
+     items:
+     - name: "Back-tie hydrophobic lab gown"
+     - name: "Gloves"
+     - name: "UV light sterilizers"
+     - name: "MediPal Decontamination wipes"
+     - name: "DNAway and RNAse Zap® reagent"
+
+protocol:
+   sections:
+     - title: "Part 1: cDNA synthesis with Superscript IV Vilo cDNA kit"
+       head: ""
+       note: "**NOTE ON HOOD PREPARATION:** To prevent cross contamination of both the sample and other reagents, this should be carried out in the SAMPLE PREPARATION HOOD, which is pre-sterilised with UV and treated with MediPal wipes, DNAway and RNAseZap reagent. Wipe down the hood with each sequentially, allowing 5 minutes for drying between each. Pipettes should also be treated in the same way, and UV treated for 30 mins between library preparations."
+       steps:
+         - step: "Recommend aliquoting the Vilo mastermix, to prevent cross contamination and to reduce potential freeze/thaw cycles."
+         - step: "Set up the following reaction:"
+           table:
+             - row: "|---|---"
+             - row: "|2x Vilo Master Mix | 5&micro;L"
+             - row: "|viral RNA | 5&micro;L"
+             - row: "|TOTAL | 10&micro;L"
+           note: "NOTE: Viral RNA input from a clinical sample should be between Ct 18-35. If Ct is between 12-15, then dilute the sample 100-fold in water, if between 15-18 then dilute 10-fold in water. This will reduce the likelihood of PCR-inhibition."
+
+         - step: "Gently mix (avoid vortexing) then pulse spin the tube to ensure maximum contact with the thermal cycler."
+         - step: "Incubate the reaction as follows:"
+           table:
+             - row: "|---|---|---"
+             - row: "| Primer annealing | 25&deg;C | 20 mins"
+             - row: "| Extension | 50&deg;C | 30 mins"
+             - row: "| Inactivation | 85&deg;C | 10 mins"
+       foot: "cDNA is now ready for amplicon generation."
+
+
+
