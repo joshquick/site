@@ -30,15 +30,30 @@ This validation acted as a test of our recently published standard operating pro
 
 ## Primer pairs
 
-30 minute run:
+Sequence coverage (log scale) at 30 minute and 2 hour time points for three different trains:
 
 ![Coverage by primer pair](/images/ebov-validation/coverage.png)
 
 ## Results
 
-Consensus sequences for 30 minute run:
+Phylogenetic tree inference (NJ, HKY performed using Geneious 11) of the three consensus
+sequences in context:
 
-[/artic/ebov-consensus-30m.fasta](https://artic.s3.climb.ac.uk/ebov-consensus-30m.fasta)
+### Mayinga strain
+
+![Mayinga tree][/images/ebov-validation/Mayinga-tree.png)
+
+### Makona strain
+
+![Makona tree][/images/ebov-validation/Makona-tree.png)
+
+### Kikwit strain
+
+![Kikwit tree][/images/ebov-validation/Kikwit-tree.png)
+
+Consensus sequences for 2 hour run:
+
+[/artic/ebov-consensus-2h.fasta](https://artic.s3.climb.ac.uk/ebov-consensus-2h.fasta)
 
 ## Data availability
 
@@ -60,7 +75,8 @@ Data hosting provided by MRC CLIMB.
 ## Acknowledgements
 
 We are grateful to Miles Carroll, Steve Pullan, Richard Vipond and Roger Hewson (Public Health England)
-for assistance with this validation project.
+for assistance with this validation project and Ben Gannon (RST/Public Health England) for supplying
+the flowcell.
 
 {% include icon-callout.html
 type='default'
