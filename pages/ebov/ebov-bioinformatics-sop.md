@@ -49,7 +49,7 @@ Phylogenetic analysis and visualization:
 
 ## Preparation
 
-Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html)
+Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html).
 
 <!-- This is all now done off-line in the setup document
 ### Installing software

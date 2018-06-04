@@ -114,12 +114,10 @@ Install the ARTIC Ebola virus data and software repository:
 
 ```bash
 git clone --recursive https://github.com/artic-network/artic-ebov.git
-```
-
-Install the ARTIC pipeline:
-
-```bash
-cd artic-ebov/fieldbioinformatics
+cd ../primer-schemes
+git checkout master
+cd artic-network/fieldbioinformatics
+git checkout master
 python setup.py install
 export PATH=$PATH:`pwd`/artic
 cd ../..
