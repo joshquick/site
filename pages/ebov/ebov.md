@@ -45,19 +45,19 @@ Ebola virus Nanopore sequencing protocol:
 Setting up the laptop computing environment using Conda:
 : > This document describes setting up a laptop with the software and environment needed to undertake off-line Nanopore bioinformatics and phylogenetic analysis.
 : Web: [http://artic.network/ebov/ebov-it-setup.html](/ebov/ebov-it-setup.html)
-<!-- : PDF: --> 
+: PDF: [ARTIC-EBOV-ITSetup-v1.0.0.pdf](/files/ARTIC-EBOV-ITSetup-v1.0.0.pdf) 
 
 <br />
 Ebola virus Nanopore bioinformatics protocol:
 : > A complete bioinformatics protocol to take the output from the [sequencing protocol](/ebov/ebov-seq-sop.html) to consensus genome sequences. Includes basecalling, de-multiplexing, mapping, polishing and consensus generation.
 : Web: [http://artic.network/ebov/ebov-bioinformatics-sop.html](/ebov/ebov-bioinformatics-sop.html)
-<!-- : PDF: --> 
+: PDF: [ARTIC-EBOV-bioinformaticsSOP-v1.0.0.pdf](/files/ARTIC-EBOV-bioinformaticsSOP-v1.0.0.pdf) 
 
 <br />
 Phylogenetic analysis and visualization:
 : > An analysis protocol for an initial phylogenetic analysis of consensus genomes. Includes alignment, phylogeny estimation and visualization.
 : Web: [http://artic.network/ebov/ebov-phylogenetics-sop.html](/ebov/ebov-phylogenetics-sop.html)
-<!-- : PDF: --> 
+: PDF: [ARTIC-EBOV-phylogeneticsSOP-v1.0.0.pdf](/files/ARTIC-EBOV-phylogeneticsSOP-v1.0.0.pdf) 
 
 <hr />
 ### Data

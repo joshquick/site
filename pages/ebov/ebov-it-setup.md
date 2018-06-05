@@ -6,9 +6,9 @@ last_updated: May 18, 2018
 tags: [protocol] 
 permalink: ebov/ebov-it-setup.html
 folder: ebov
-title_text: "Ebola virus bioinformatics protocol"
+title_text: "Ebola virus bioinformatics environment setup"
 subtitle_text: "Nanopore | bioinformatics"
-document_name: "ARTIC-EBOV-bioinformaticsSOP"
+document_name: "ARTIC-EBOV-ITSetup"
 version: v1.0.0
 creation_date: 2018-05-26
 forked_from: 
@@ -29,9 +29,9 @@ This document is part of the Ebola virus Nanopore sequencing protocol package:
 #### Related documents:
 
 Ebola virus Nanopore bioinformatics protocol:
-: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+: [http://artic.network/ebov/ebov-bioinformatics-sop.html](http://artic.network/ebov/ebov-bioinformatics-sop.html)
 
-Ebola virus Nanopore bioinformatics protocol:
+Phylogenetic analysis and visualization:
 : [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
 
 
@@ -62,8 +62,32 @@ The steps in this document should be done and tested prior to sequencing, partic
 
 Software will be installed using [Conda](https://conda.io/) -- a cross-platform package and dependency installer.
  
-For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install.
+For Conda installation instructions for your operating system go to: [https://conda.io/docs/user-guide/install/](https://conda.io/docs/user-guide/install/). We suggest installing the `Miniconda` version which is relatively small and quick to install. 
 
+> *NOTE:* Install the `64-bit Python 3.6` version of Miniconda
+
+### Installing ARTIC Ebola virus specific data and software
+
+Install the ARTIC Ebola virus data and software repository:
+
+```bash
+git clone --recursive https://github.com/artic-network/artic-ebov.git
+```
+
+Create a custom Conda environment for running software. This may take some time as it will install the required packages and all their dependencies.
+
+```bash
+conda env create -f artic-ebov/environment.yml
+```
+
+```bash
+cd artic-ebov/fieldbioinformatics
+python setup.py install
+cd ../..
+```
+
+
+<!-- No longer necessary given environment yml file.
 First use the following commands to set up access to [BioConda](https://bioconda.github.io) (a repository of over 3000 bioinformatics packages):
 
 ```bash
@@ -74,13 +98,14 @@ conda config --add channels bioconda
 Create an custom environment for running software and install the packages:
   
 ```bash
-conda create -n artic
+conda create -n artic-ebov
 ```
+-->
 
 Although not strictly necessary this will prevent any conflicts with other similar software installed and can be readily removed. You can use this command to activate the environment: 
 
 ```
-source activate artic
+source activate artic-ebov
 ```
 
 and then deactivate it again using this:
@@ -89,34 +114,10 @@ and then deactivate it again using this:
 source deactivate
 ```
 
-### Installing software
-
-Activate the ARTIC environment:
+The artic environment can be removed using this:
 
 ```bash
-source activate artic
-```
-
-Install the external software packages required for the bioinformatics protocol and the phylogenetics:
-
-```bash
-conda install -y bwa samtools biopython nanopolish porechop pandas  
-conda install -y muscle phyml goalign gotree ete3
-```
-
-Install the ARTIC Ebola virus data and software repository:
-
-```bash
-git clone --recursive https://github.com/artic-network/artic-ebov.git
-```
-
-Install the ARTIC pipeline:
-
-```bash
-cd artic-ebov/fieldbioinformatics
-python setup.py install
-export PATH=$PATH:`pwd`/artic
-cd ../..
+conda remove --name artic-ebov --all
 ```
 
 ### Installing Oxford Nanopore MinKNOW and Albacore

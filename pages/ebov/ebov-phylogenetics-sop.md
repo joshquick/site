@@ -36,7 +36,7 @@ Setting up the laptop computing environment using Conda:
 : [http://artic.network/ebov/ebov-it-setup.html](http://artic.network/ebov/ebov-it-setup.html)
 
 Ebola virus Nanopore bioinformatics protocol:
-: [http://artic.network/ebov/ebov-phylogenetics-sop.html](http://artic.network/ebov/ebov-phylogenetics-sop.html)
+: [http://artic.network/ebov/ebov-bioinformatics-sop.html](http://artic.network/ebov/ebov-bioinformatics-sop.html)
 
 <br /><br /><br />
 
@@ -48,20 +48,14 @@ Ebola virus Nanopore bioinformatics protocol:
 
 Set up the computing environment as described in this document: [ebov-it-setup](ebov-it-setup.html)
 
-This protocol also assumes that the setup and installation of the bioinformatics protocol has been performed as described in this document: [ebov-bioinformatics-sop-1.0.0](ebov-bioinformatics-sop.html) .
+This protocol also assumes that the setup and installation of the bioinformatics protocol has been performed as described in this document: [ebov-bioinformatics-sop](ebov-bioinformatics-sop.html) .
 
 ### Installing software
 
 Activate the ARTIC Conda environment:
 
 ```bash
-source activate artic
-```
-
-If not already done, install the phylogenetics packages required:
-
-```bash
-conda install -y muscle phyml goalign gotree ete3
+source activate artic-ebov
 ```
 
 ### Reference genomes

@@ -49,42 +49,19 @@ Phylogenetic analysis and visualization:
 
 ## Preparation
 
-Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html)
+Set up the computing environment as described here in this document: [ebov-it-setup](ebov-it-setup.html). This should be done and tested prior to sequencing, particularly if this will be done in an environment without internet access or where this is slow or unreliable. Once this is done, the bioinformatics can be performed largely off-line. 
 
-### Installing software
+## Nanopore Bioinformatics
 
 Activate the ARTIC environment:
 
 ```bash
-source activate artic
+source activate artic-ebov
 ```
-
-Install the bioinformatics packages required:
-
-```bash
-conda install -y bwa samtools biopython nanopolish porechop pandas
-```
-
-Install the Artic pipeline:
-
-```bash
-git clone https://github.com/artic-network/fieldbioinformatics.git
-python fieldbioinformatics/setup.py install
-export PATH=$PATH:`pwd`/fieldbioinformatics/artic
-```
-
-Install the Artic primer schemes:
-
-```bash
-git clone https://github.com/artic-network/primer-schemes.git
-```
-
-<div class="pagebreak"> </div>
-## Nanopore Bioinformatics
 
 ### Basecalling with Albacore (MinION on laptop)
 
-Run Albacore on the new run folder:
+Run the Albacore basecaller on the new MinION run folder:
 
 ```bash
 read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
