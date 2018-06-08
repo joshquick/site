@@ -329,7 +329,8 @@ Ebola virus Nanopore sequencing kit-list:
    | DNA (500 ng) | 25&micro;L
    | Ultra II End Prep Reaction Buffer | 3.5&micro;L
    | Ultra II End Prep Enzyme Mix | 1.5&micro;L
-   | Total | 30&micro;L    
+   | Total | 30&micro;L  
+    
 > **NOTE:** Amount of RNA can vary from 250-1000ng, less than this and the coverage and depth may be sub-optimal. 
     
 2. Incubate at RT for <span style="color:red">5 mins</span> or <span style="color:blue">10 mins</span> then 65&deg;C for <span style="color:red">5 mins</span> or <span style="color:blue">10 mins</span>
