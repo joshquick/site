@@ -130,7 +130,7 @@ Again, alter ``/path/to/reads`` to point to the original location of the FAST5 f
 For each barcode you wish to process:
 
 ```bash
-artic minion --normalise 200 --threads 4 --scheme-directory primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
+artic minion --normalise 200 --threads 4 --scheme-directory artic-ebov/primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
 ```
 
 Replace ``samplename`` as appropriate:
