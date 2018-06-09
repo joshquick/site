@@ -106,15 +106,15 @@ This stage is obligatory, even if you have already demultiplexed with Albacore, 
 significant barcoding misassignments that can confound results:
 
 ```bash
-artic demultiplex --threads 4 --prefix run_name_final run_name_all.fastq
+artic demultiplex --threads 4 run_name_all.fastq
 ```
 
 Now you will have new files called:
 
 ```bash
-run_name_final_BC01.fastq
-run_name_final_BC02.fastq
-run_name_final_BC03.fastq
+run_name_all_BC01.fastq
+run_name_all_BC02.fastq
+run_name_all_BC03.fastq
 ```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
