@@ -67,6 +67,10 @@ Data hosting provided by MRC CLIMB.
 
 [artic/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5](https://artic.s3.climb.ac.uk/bulkfiles/nick_W54_55SU1_SUW_20180523_FAH83694_MN21030_sequencing_run_ZEBOV_3Samples_NB_58439.fast5) [20.5Gb]
 
+FAST5 reads from entire run (~6.4M reads):
+
+[artic/fast5/ZEBOV_3Samples_NB.tar](https://artic.s3.climb.ac.uk/fastt/ZEBOV_3Samples_NB.tar) [153Gb]
+
 ## Credits
 
    - Babak Afrough (Public Health England) for sample preparation, and laboratory and bioinformatics assistance
