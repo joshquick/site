@@ -1,4 +1,4 @@
-[submodule "artic-ebov"]
-	path = artic-ebov
+[submodule "pages/artic-ebov"]
+	path = pages/artic-ebov
 	url = https://github.com/artic-network/artic-ebov.git
 	branch = master
