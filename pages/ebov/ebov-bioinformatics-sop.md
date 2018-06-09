@@ -67,30 +67,34 @@ Run the Albacore basecaller on the new MinION run folder:
 read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
 ````
 
-You need to substitute `/path/to/reads` to the directory where the FAST5 files from your
+You need to substitute `/path/to/reads` to the folder where the FAST5 files from your
 run are. Common locations are:
 
    - Mac: ```/Library/MinKNOW/data/reads/run_name```
    - Linux: ```/var/lib/MinKNOW/data/reads```
    - Windows ```c:/data/reads```
+   
+This will create a folder called `run_name` with the base-called reads in it.
 
 ### Consensus sequence generation
 
 Gather up the FASTQ output from Albacore:
 
 ```bash
-artic gather --min-length 400 --max-length 700 --prefix run_name output_directory
+artic gather --min-length 400 --max-length 700 --prefix run_name basecalled_reads
 ```
+
+Here `basecalled_reads` should be the folder in which Albacore put the base-called reads (i.e., `run_name` from the command above).
 
 We use a length filter here of between 400 and 700 to remove obviously chimeric reads.
 
-### Basecalling using MinIT or GridION
-
-If running on MinIT or GridION and you have used Guppy to basecall through Dogfish, instead you can do:
-
-```bash
-artic gather --guppy --min-length 400 --max-length 700 --prefix run_name /data/basecalled/path/to/reads
-```
+> **Basecalling using MinIT or GridION**
+> 
+> If running on MinIT or GridION and you have used Guppy to basecall through Dogfish, instead you can do:
+> 
+> ```bash
+> artic gather --guppy --min-length 400 --max-length 700 --prefix run_name /data/basecalled/path/to/reads
+> ```
 
 You will now have a file called: ``run_name_all.fastq``
 and a file called ``run_name_sequencing_summary.txt``, 
