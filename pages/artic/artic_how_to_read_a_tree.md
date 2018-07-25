@@ -14,13 +14,15 @@ Andrew Rambaut
 
 Phylogenetics trees contain a lot of information about the inferred evolutionary relationships between a set of viruses. Decoding that information is not always straightforward and requires some understanding of the elements of a phylogeny and what they represent. Here is an example (fictional) phylogeny as it may be presented in a journal article:
 
-{% include image.html file="phylogram_1.png" caption="" %}
+{% include tree.html id="phylogram_1" newick='((((((virus1:0.1,virus2:0.12)0.95:0.08,(virus3:0.011,virus4:0.0087)1.0:0.15)0.65:0.03,virus5:0.21)1.0:0.2,(virus6:0.45,virus7:0.4)0.51:0.02)1.0:0.1,virus8:0.4)1.0:0.1,(virus9:0.04,virus10:0.03)1.0:0.6);' width="640" height="480" font_size="22" caption="" %}
 
 ## What information does the tree contain?
 
 We can start with the dimensions of the figure. In this figure the horizonal dimension gives the amount of genetic change. The horizonal lines are branches and represent evolutionary lineages changing over time. The longer the branch in the horizonal dimension, the larger the amount of change. The bar at the bottom of the figure provides a scale for this. In this case the line segment with the number '0.07' shows the length of branch that represents an amount genetic change of 0.07. The units of branch length are usually nucleotide substitutions per site – that is the number of changes or 'substitutions' divided by the length of the sequence (although they may be given as % change, i.e., the number of changes per 100 nucleotide sites). The vertical dimension in this figure has no meaning and is used simply to lay out the tree visually with the labels evenly spaced vertically. The vertical lines therefore simply tell you which horizontal line connects to which and how long they are is irrelevent. 
 
 {% include image.html file="phylogram_1a.png" caption="" %}
+{% include tree.html id="phylogram_1" newick='((((((virus1:0.1,virus2:0.12):0.08,(virus3:0.011,virus4:0.0087):0.15):0.03,virus5:0.21):0.2,(virus6:0.45,virus7:0.4):0.02):0.1,virus8:0.4):0.1,(virus9:0.04,virus10:0.03):0.6);' width="640" height="480" font_size="22" caption="" %}
+            
 
 Next, we will consider tree structure itself. This can be broken down into nodes (represented in the tree, above, as circles) and branches (the lines connecting them). There are two types of nodes; external nodes, also called 'tips' or 'leaves' (you can only take the tree metaphor so far and I prefer the term 'tip'), and internal nodes. The tips are shown here with green circles and these represent the actual viruses sampled and sequenced. These are our data and we usually know information about these, beyond the actual sequence, such as when they were collected, what host they were in, where that host was found, clinical features of the disease. The internal nodes are represented by blue circles and these represent putative ancestors for the sampled viruses. Ancestors in this context is an infected host at sometime in the past that in turn infected 2 or more new hosts producing chains of infections that lead to the sampled viruses. The branches then represent this chain of infections. This tree is rooted which suggests we know where the ultimate common ancestor of all the sampled viruses was (the red circle). Knowing this gives the tree an order of branching events in the horizonal dimension: Ancestor 'A' exists prior to ancestors 'B' and 'C' and time is approximately flowing from left to right. I say 'approximately' because in this tree the horizonal axis is measured as genetic change and to convert this into actual time we need to make some assumptions about the relationship between genetic change and time. These assumptions are referred to as the 'molecular clock' and I will discuss this in a later article.
 
@@ -56,6 +58,8 @@ The second approach to rooting the tree is to use a method that implicitly assum
 Here is the same tree as above but with the tips labeled by the type of host they were isolated from:
 
 {% include image.html file="phylogram_4.png" caption="" %}
+{% include tree.html id="phylogram_4" newick='((((((\"camel virus\":0.1,\"camel virus\":0.12):0.08,(\"human virus\":0.011,\"human virus\":0.0087):0.15):0.03,\"bat virus\":0.21):0.2,(\"bat virus\":0.45,\"bat virus\":0.4):0.02):0.1,\"bat virus\":0.4):0.1,(\"whale virus\":0.04,\"whale virus\":0.03):0.6);' clustering='{ "camel virus": 1, "human virus": 2, "bat virus": 3, "whale virus": 4}'  caption="Figure 1." %}
+
 
 You can immediately see that there is some structure there with viruses grouping by host. For example the two viruses from humans have a closer common ancestor with each other than they do with any other virus. At first glance it may seem that human viruses are more closely related to bat viruses than camel viruses because they sit next to each other but remember that the vertical dimension is meaningless. In fact the viruses can be swapped round at any internal node and the tree is the same:
 

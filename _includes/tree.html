@@ -1,0 +1,16 @@
+<figure {% if {{include.align}} %}style="text-align: {{include.align}}" {% endif %}>
+    <svg id="{{ include.id }}_svg"></svg>
+    <div id="{{ include.id }}_legend"></div>
+    {% if {{include.caption}} %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+</figure>
+
+<script>
+    createTree("#{{ include.id }}_svg", "#{{ include.id }}_legend",
+        "{{ include.newick }}",
+        {% if {{include.width}} %}{{ include.width }}{% else %}640{% endif %},
+        {% if {{include.height}} %}{{ include.height }}{% else %}320{% endif %},
+        {% if {{include.font_size}} %}{{ include.font_size }}{% else %}24{% endif %},
+    {% if {{include.clustering}} %}{{ include.clustering }}{% else %}null{% endif %}
+    );
+</script>               
+

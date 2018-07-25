@@ -5,16 +5,7 @@
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
 <title>{{ page.document_name }}-{{ page.version }} | {{ page.title }}</title>
 
-<link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/modern-business.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+{% include head_common.html %}
 
-<link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/theme-artic.css" | prepend: site.baseurl }}">
-
-<link rel="stylesheet" href="{{ "/css/tables.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/document.css" | prepend: site.baseurl }}">
-
-
-
+<link rel="stylesheet" type="text/css" href="/css/tables.css">
+<link rel="stylesheet" type="text/css" href="/css/document.css">
