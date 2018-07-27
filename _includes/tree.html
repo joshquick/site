@@ -8,8 +8,10 @@
     createTree("#{{ include.id }}_svg", "#{{ include.id }}_legend",
         "{{ include.newick }}",
         {% if {{include.width}} %}{{ include.width }}{% else %}640{% endif %},
-        {% if {{include.height}} %}{{ include.height }}{% else %}320{% endif %},
-        {% if {{include.font_size}} %}{{ include.font_size }}{% else %}24{% endif %},
+    {% if {{include.height}} %}{{ include.height }}{% else %}320{% endif %},
+    {% if {{include.font_size}} %}{{ include.font_size }}{% else %}24{% endif %},
+    {% if {{include.circle_size}} %}{{ include.circle_size }}{% else %}0{% endif %},
+    {% if {{include.rerootable}} %}{{ include.rerootable }}{% else %}false{% endif %},
     {% if {{include.clustering}} %}{{ include.clustering }}{% else %}null{% endif %}
     );
 </script>               

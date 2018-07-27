@@ -6,10 +6,24 @@
     fill: #4f70af;
     stroke: white;
     stroke-width: 2px;
-    r: 8px
+    r: 6px
 }
 
 .external-node circle {
     fill: #a8bd4f;
+    stroke: black;
+    stroke-width: 0.5px;
+    r: 5px
 }
 
+#phylogram_1a_svg text {
+    fill: #DDDDDD;
+}
+
+#phylogram_1b_svg text {
+    fill: #7e2b58;
+}
+
+#phylogram_1b_svg path {
+    stroke: #DDDDDD;
+}

@@ -1,24 +1,13 @@
-function createTree(svgId, legendId, newick, width, height, fontSize, clustering) {
+function createTree(svgId, legendId, newick, width, height, fontSize, circleSize, rerootable, clustering) {
 
     // default scheme to color by date    
     var coloring_scheme = d3.scale.category10();
 
-    // this will be used to map bootstrap support values to edge thickness
-    var bootstrap_scale = d3.scale.linear().domain([0, 0.5, 0.7, 0.9, 0.95, 1]).range([1, 2, 3, 4, 5, 6]).interpolate(d3.interpolateRound);
-
     function edgeStyler(dom_element, edge_object) {
-        if ("bootstrap" in edge_object.target) {
-            dom_element.style("stroke-width", bootstrap_scale(edge_object.target.bootstrap) + "pt");
-        }
         dom_element.style("stroke", "cluster" in edge_object.target ? coloring_scheme(edge_object.target.cluster) : null);
-
     }
 
     function nodeStyler(dom_element, node_object) {
-        // dom_element.append("text").classed("bootstrap", true).text("1.0").attr("dx", "-.3em").attr("dy", "-.3em").attr("text-anchor", "end").attr("alignment-baseline", "bottom");
-        if ("name" in node_object && node_object.name == "root") {
-
-        }
         if ("bootstrap" in node_object && node_object.bootstrap) {
             var label = dom_element.selectAll(".bootstrap");
             if (label.empty()) {
@@ -41,7 +30,7 @@ function createTree(svgId, legendId, newick, width, height, fontSize, clustering
             // turn off the menu on internal nodes
             'transitions': false,
             // turn off d3 animations
-            'reroot': false,
+            'reroot': rerootable,
             'hide': false,
             'show-scale': false,
             'align-tips': false,
@@ -49,6 +38,8 @@ function createTree(svgId, legendId, newick, width, height, fontSize, clustering
         })
         .size([height, width])
         .font_size(fontSize)
+        .node_circle_size(circleSize)
+        .external_node_circle_size(circleSize)
         .style_edges(edgeStyler)
         .style_nodes(nodeStyler)
     ;
