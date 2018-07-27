@@ -1,4 +1,9 @@
+svg {
+    padding-left: 10px;
+}
+
 .tree-selection-brush .extent {
+}
     fill-opacity: .05;
     stroke: #fff;
     shape-rendering: crispEdges;
@@ -92,10 +97,10 @@
     stroke-width: 3px;
 }
 
-.internal-node circle:hover, .internal-node ellipse:hover, .internal-node rect:hover {
-    fill: black;
-    stroke: #CCC;
-}
+/*.internal-node circle:hover, .internal-node ellipse:hover, .internal-node rect:hover {*/
+    /*fill: black;*/
+    /*stroke: #CCC;*/
+/*}*/
 
 .tree-widget {
 }
