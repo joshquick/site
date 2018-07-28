@@ -42,10 +42,7 @@ Tree A is in polar format (often called a circle tree). This is basically the sa
 
 I mentioned above that if we know the root of the tree then that provides information about the order of nodes in the tree. What do we do if we don't know? How can we work out where the root is? Many methods of reconstructing phylogenies from gene sequences do not explicitly estimate the root of the tree. When the tree is generated it will often have an arbitrary root. For example, here is the tree, above, rooted in an arbitrary place:
 
-{% include tree.html id="unrooted_phylogram1" newick='((virus1:0.1,virus2:0.12):0.08,((virus3:0.011,virus4:0.0087):0.15,(virus5:0.21,((virus6:0.45,virus7:0.4):0.02,(virus8:0.4,(virus9:0.04,virus10:0.03):0.7):0.1):0.2):0.03):0.04);' width="640" height="480" font_size="22" circle_size="8" rerootable="true" caption="" %}
-                  
-{% include tree.html id="unrooted_phylogram" newick='((virus1:0.1,virus2:0.12):0.08,((virus3:0.011,virus4:0.0087):0.15,(virus5:0.21,((virus6:0.45,virus7:0.4):0.02,(virus8:0.4,
-((virus9:0.04,virus10:0.03):0.6):0.1):0.1):0.2):0.03):0.04);' width="640" height="480" font_size="22" circle_size="8" rerootable="true" caption="" %}
+{% include tree.html id="unrooted_phylogram" newick='((virus1:0.1,virus2:0.12):0.08,((virus3:0.011,virus4:0.0087):0.15,(virus5:0.21,((virus6:0.45,virus7:0.4):0.02,(virus8:0.4,((virus9:0.04,virus10:0.03):0.6)root:0.1):0.1):0.2):0.03):0.04)not_root;' width="640" height="480" font_size="22" circle_size="8" rerootable="true" caption="" %}
 
 This is exactly the same underlying tree as those above. I have marked the previous rooting position with a red circle. What is important to note is that it no longer holds that the left to right order of the internal nodes (the blue circles) can be interpreted as the order of common ancestors. Figures that are arbitrarily rooted should mention this in the legend but they often don't.
 
@@ -59,7 +56,7 @@ The second approach to rooting the tree is to use a method that implicitly assum
 
 Here is the same tree as above but with the tips labeled by the type of host they were isolated from:
 
-{% include image.html file="phylogram_4.png" caption="" %}
+{% include image.html file="phylogram_4.png" max-width="640px" caption="" %}
 {% include tree.html id="phylogram_4" newick='((((((\"camel virus\":0.1,\"camel virus\":0.12):0.08,(\"human virus\":0.011,\"human virus\":0.0087):0.15):0.03,\"bat virus\":0.21):0.2,(\"bat virus\":0.45,\"bat virus\":0.4):0.02):0.1,\"bat virus\":0.4):0.1,(\"whale virus\":0.04,\"whale virus\":0.03):0.6);' clustering='{ "camel virus": 1, "human virus": 2, "bat virus": 3, "whale virus": 4}'  caption="Figure 1." %}
 
 
