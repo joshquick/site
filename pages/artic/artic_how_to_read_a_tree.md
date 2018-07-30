@@ -46,10 +46,16 @@ The numbers next to each node, in red, above, represent a measure of support for
 
 Trees are sometimes drawn in other ways. Both these figures are representations of the same underlying tree as above:
 
-| A:| B: |
-<span>{% include image.html file="phylogram_2.png" max-width="640px" caption="" %}</span><span>{% include image.html file="phylogram_3.png" max-width="640px" caption="" %}</span>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="width: 48%">
+A: {% include image.html file="phylogram_2.png" max-width="100%" caption="" %}
+    </div>
+    <div style="width: 48%">
+B: {% include image.html file="phylogram_3.png" max-width="100%" caption="" %}
+    </div>
+</div>
 
-Tree A is in polar format (often called a circle tree). This is basically the same as the trees above but in polar coordinates. The vertical dimension is now the angle of the circle and the horizonal dimension is the distance from the centre point. These trees are generally used to make a big visual impact in papers but generally have reduced readability - it is difficult to compare how far nodes are from the centre. Generally best avoided. Tree B is a radial format tree. This is often used when the rooting of the tree is not known (although I have marked with a red circle the equivalent position of the root in trees above). This format tends to clump closely related sequences together making their precise relationships difficult to see. Generally best avoided too. I will not mention these formats again.
+Tree A is in polar format (often called a circle tree). This is basically the same as the trees above but in polar coordinates. The vertical dimension is now the angle of the circle and the horizonal dimension is the distance from the centre point. These tree formats are often used to make a big visual impact in papers but generally have reduced readability - it is difficult to compare how far nodes are from the centre. They are best avoided. Tree B is a radial format tree. This is often used when the rooting of the tree is not known (although I have marked with a red circle the equivalent position of the root in trees above). This format tends to clump closely related sequences together making their precise relationships difficult to see. Generally best avoided too. I will not mention these formats again.
 
 ## The root of the tree
 
@@ -59,7 +65,7 @@ I mentioned above that if we know the root of the tree then that provides inform
     root_text="This is the position of the root node<br>in the rooted trees, above.<br><br>Click on it and select \\'Reroot on this node\\'<br>to root the tree"
 %}
 
-This is exactly the same underlying tree as those above. I have marked the previous rooting position with a red circle. What is important to note is that it no longer holds that the left to right order of the internal nodes (the blue circles) can be interpreted as the order of common ancestors. Figures that are arbitrarily rooted should mention this in the legend but they often don't.
+This is exactly the same underlying tree as those above. I have marked the previous rooting position with a red circle. What is important to note is that it no longer holds that the left to right order of the internal nodes (the blue circles) can be interpreted as the order of common ancestors. Figures that are arbitrarily rooted should mention this in the legend but they often don't. Click on the red circle and select `Reroot on this node` to switch the tree back to using this root.
 
 ## How do we work out where the root is?
 
@@ -71,24 +77,39 @@ The second approach to rooting the tree is to use a method that implicitly assum
 
 Here is the same tree as above but with the tips labeled by the type of host they were isolated from:
 
-{% include image.html file="phylogram_4.png" max-width="640px" caption="" %}
+{% include image.html file="phylogram_4.png" max-width="70%" caption="" %}
+<!--
 {% include tree.html id="phylogram_4" newick='((((((\"camel virus\":0.1,\"camel virus\":0.12):0.08,(\"human virus\":0.011,\"human virus\":0.0087):0.15):0.03,\"bat virus\":0.21):0.2,(\"bat virus\":0.45,\"bat virus\":0.4):0.02):0.1,\"bat virus\":0.4):0.1,(\"whale virus\":0.04,\"whale virus\":0.03):0.6);' clustering='{ "camel virus": 1, "human virus": 2, "bat virus": 3, "whale virus": 4}'  caption="Figure 1." %}
-
+-->
 
 You can immediately see that there is some structure there with viruses grouping by host. For example the two viruses from humans have a closer common ancestor with each other than they do with any other virus. At first glance it may seem that human viruses are more closely related to bat viruses than camel viruses because they sit next to each other but remember that the vertical dimension is meaningless. In fact the viruses can be swapped round at any internal node and the tree is the same:
 
-{% include image.html file="phylogram_4a.png" max-width="50%" caption="" %}
-{% include image.html file="phylogram_4b.png" max-width="50%" caption="" %}
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="width: 48%">
+{% include image.html file="phylogram_4a.png" max-width="100%" caption="" %}
+    </div>
+    <div style="width: 48%">
+{% include image.html file="phylogram_4b.png" max-width="100%" caption="" %}
+    </div>
+</div>
 
 In fact the human and camel viruses are more closely related to each other and equally related to the bat viruses. This means we can't say from this tree if camels are the source of the human viruses or vice-versa, or just as likely, bats are independently the source of both human and camel outbreaks. We can however suggest that bats were the ultimate source of both camel and human  viruses because of the much greater diversity of bat viruses. Another way to look at this is that the common ancestors of the human and camel viruses lie within the diversity of all the bat viruses.
 
-{% include image.html file="phylogram_4c.png" caption="" %}
+{% include image.html file="phylogram_4c.png" max-width="70%" caption="" %}
 
 In this tree the internal nodes are labelled with the reconstructed host species based on the principle of parsimony. This is the reconstruction that requires the fewest jumps between host species. The grey nodes are those that cannot be unambiguously reconstructed. For example, the common ancestor of the human and camel viruses could equally well be in humans, bats or camels with all three possibilities only requiring 2 host jumps:
 
-{% include image.html file="phylogram_5a.png" max-width="50%" caption="" %}
-{% include image.html file="phylogram_5b.png" max-width="50%" caption="" %}
-{% include image.html file="phylogram_5c.png" max-width="50%" caption="" %}
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="width: 32%">
+{% include image.html file="phylogram_5a.png" max-width="100%" caption="" %}
+    </div>
+    <div style="width: 32%">
+{% include image.html file="phylogram_5b.png" max-width="100%" caption="" %}
+    </div>
+    <div style="width: 32%">
+{% include image.html file="phylogram_5c.png" max-width="100%" caption="" %}
+    </div>
+</div>
 
 Distinguishing these three possibilities generally requires additional data perhaps with a denser sampling of viruses. 
 
