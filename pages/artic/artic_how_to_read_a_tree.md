@@ -1,8 +1,16 @@
 ---
 layout: document
 title: How to read a phylogenetic tree
+title_text: "How to read a phylogenetic tree"
+subtitle_text: "Tutorial | Phylogenetics"
+document_name: "ARTIC-Tutorial-Phylogenetics-Part1"
+version: v1.0.0
+creation_date: 2018-07-30
+revision_date: 2015-07-30 
+forked_from: 
+author: Andrew Rambaut
 keywords: tutorial
-last_updated: July 13, 2017
+last_updated: July 30, 2018
 tags: [tutorial]
 summary:
 sidebar: artic_sidebar
@@ -11,9 +19,8 @@ css: how-to-read-a-tree
 toc: false
 folder: artic
 ---
-<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
 
-Andrew Rambaut
+<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
 
 Phylogenetics trees contain a lot of information about the inferred evolutionary relationships between a set of viruses. Decoding that information is not always straightforward and requires some understanding of the elements of a phylogeny and what they represent. Here is an example (fictional) phylogeny as it may be presented in a journal article:
 
