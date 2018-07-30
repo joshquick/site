@@ -5,8 +5,8 @@ title_text: "How to read a phylogenetic tree"
 subtitle_text: "Tutorial | Phylogenetics"
 document_name: "ARTIC-Tutorial-Phylogenetics-Part1"
 version: v1.0.0
-creation_date: 2018-07-30
-revision_date: 2015-07-30 
+revision_date: 2018-07-30
+creation_date: 2015-07-30 
 forked_from: 
 author: Andrew Rambaut
 keywords: tutorial
