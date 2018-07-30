@@ -113,5 +113,46 @@ function createTree(svgId, legendId, newick, width, height, fontSize, circleSize
 
         }
     }
+
 }
 
+function labelTree(svgId, internalNodeText, externalNodeText, branchText, bootstrapValueText, rootText ) {
+    if (internalNodeText) {
+        d3.select(svgId).selectAll(".internal-node").select("circle")
+            .attr("onmousemove", "showTooltip(evt, '" + internalNodeText + "');")
+            .attr("onmouseout", "hideTooltip();");
+    }
+    if (externalNodeText) {
+        d3.select(svgId).selectAll(".external-node")
+            .attr("onmousemove", "showTooltip(evt, '" + externalNodeText + "');")
+            .attr("onmouseout", "hideTooltip();");
+    }
+    if (branchText) {
+        d3.select(svgId).selectAll(".branch")
+            .attr("onmousemove", "showTooltip(evt, '" + branchText + "');")
+            .attr("onmouseout", "hideTooltip();");
+    }
+    if (rootText) {
+        d3.select(svgId).select("#root")
+            .attr("onmousemove", "showTooltip(evt, '" + rootText + "');")
+            .attr("onmouseout", "hideTooltip();");
+    }
+    if (bootstrapValueText) {
+        d3.select(svgId).selectAll(".bootstrap")
+            .attr("onmousemove", "showTooltip(evt, '" + bootstrapValueText + "');")
+            .attr("onmouseout", "hideTooltip();");
+    }
+}
+
+function showTooltip(evt, text) {
+    let tooltip = document.getElementById("tooltip");
+    tooltip.innerHTML = text;
+    tooltip.style.display = "block";
+    tooltip.style.left = evt.pageX + 10 + 'px';
+    tooltip.style.top = evt.pageY + 10 + 'px';
+}
+
+function hideTooltip() {
+    var tooltip = document.getElementById("tooltip");
+    tooltip.style.display = "none";
+}

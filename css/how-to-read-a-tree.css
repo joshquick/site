@@ -16,6 +16,11 @@
     r: 5px
 }
 
+#not-root circle {
+    display: none;
+    r: 0px
+}
+
 #phylogram_1a_svg text {
     fill: #DDDDDD;
 }
@@ -26,4 +31,12 @@
 
 #phylogram_1b_svg path {
     stroke: #DDDDDD;
+}
+
+#tooltip {
+    background: #F6EECA;
+    border: 1px solid #005C68;
+    color: #005C68;
+    border-radius: 5px;
+    padding: 5px;
 }

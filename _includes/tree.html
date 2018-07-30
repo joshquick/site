@@ -14,5 +14,12 @@
     {% if {{include.rerootable}} %}{{ include.rerootable }}{% else %}false{% endif %},
     {% if {{include.clustering}} %}{{ include.clustering }}{% else %}null{% endif %}
     );
-</script>               
+    labelTree("#{{ include.id }}_svg",
+        {% if {{include.internal_node_text}} %}"{{ include.internal_node_text }}"{% else %}null{% endif %},
+    {% if {{include.external_node_text}} %}"{{ include.external_node_text }}"{% else %}null{% endif %},
+    {% if {{include.branch_text}} %}"{{ include.branch_text }}"{% else %}null{% endif %},
+    {% if {{include.support_text}} %}"{{ include.support_text }}"{% else %}null{% endif %},
+    {% if {{include.root_text}} %}"{{ include.root_text }}"{% else %}null{% endif %}
+    );
+</script>
 
