@@ -14,13 +14,15 @@ folder: artic
 
 University of Edinburgh
 : [Andrew Rambaut](http://tree.bio.ed.ac.uk)
-: Luiz Carvalho
+: JT McCrone
+: Rachel Colquhoun
 : Aine O'Toole
 : Verity Hill
 
 University of Birmingham
 : Nick Loman
 : Josh Quick
+: Will Rowe
 
 University of Cambridge
 : Ian Goodfellow
@@ -34,6 +36,7 @@ KU Leuven
 
 University of Oxford
 : Christophe Fraser
+: Anel Nurtay
 
 Fred Hutchinson Cancer Research Center
 : Trevor Bedford
@@ -42,6 +45,7 @@ Fred Hutchinson Cancer Research Center
 
 University of California Los Angeles
 : Marc Suchard
+: Xiang Ji
 
 {% include icon-callout.html
 type='default'
