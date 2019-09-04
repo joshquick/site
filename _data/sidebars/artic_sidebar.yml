@@ -70,3 +70,11 @@ entries:
       url: /zika_virus.html
       output: web, pdf
 
+  - title: Data Releases
+    output: web, pdf
+    folderitems:
+    - title: PHE data release 2019
+      url: /phe_data_release_2019.html
+      output: web, pdf
+
+
