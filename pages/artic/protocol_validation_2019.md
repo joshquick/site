@@ -1,16 +1,16 @@
 ---
 title: Data releases from the ARTIC network 
-keywords: ebola data
+keywords: data
 last_updated: September 1, 2019
 tags: [data, ebola, nipah]
 summary:
 sidebar: artic_sidebar
-permalink: phe_data_release_2019.html
+permalink: protocol_validation_2019.html
 toc: false
 folder: artic
 ---
 
-> Data from our visit to Public Health England, August 2019.
+> Protocol Validation 2019
 
 
 ## Ebola virus
@@ -19,8 +19,8 @@ folder: artic
 | ----------------- | ---------- | ------------------------------------------------------------ | ----------------------------------------------- | --------- | ------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | EBOV Metagenomics | 30.08.2019 | 9=mayinga, <br/> 10=kikwit, <br/> 11=makona | 9n | rapid PCR | FAK25288 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Metagenomics.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_112023_FAK25288_minion_sequencing_run_EBOV_Metagenomics.fast5) |
 | EBOV Metagenomics Smartplex | 30.08.2019 | 9=mayinga, <br/> 10=kikwit, <br/> 11=makona | smartplex | rapid PCR | FAK25413 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Metagenomics_smartplex.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_123031_FAK25413_minion_sequencing_run_EBOV_Metagenomics_smartplex.fast5) |
-| EBOV Amplicons | 30.08.2019 | 3=mayinga, <br/> 4=kikwit, <br/> 5=makona, <br/> 6=negative | smartplex | native ligation PCR | FAL30025 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Amplicons.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_155508_FAL30025_minion_sequencing_run_EBOV_Amplicons.fast5) |
-| EBOV Amplicons Flongle | 30.08.2019 | 3=mayinga, <br/> 4=kikwit, <br/> 5=makona, <br/> 6=negative | smartplex | native ligation PCR | AAQ411 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Amplicons_flongle.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_160932_AAQ411_minion_sequencing_run_EBOV_Amplicons_flongle.fast5) |
+| EBOV Amplicons | 30.08.2019 | 3=mayinga, <br/> 4=kikwit, <br/> 5=makona, <br/> 6=negative | multiplex PCR | native ligation PCR | FAL30025 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Amplicons.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_155508_FAL30025_minion_sequencing_run_EBOV_Amplicons.fast5) |
+| EBOV Amplicons Flongle | 30.08.2019 | 3=mayinga, <br/> 4=kikwit, <br/> 5=makona, <br/> 6=negative | multiplex PCR | native ligation PCR | AAQ411 | [download](http://artic.s3.climb.ac.uk/run-folders/EBOV_Amplicons_flongle.tar.gz) | [download](http://artic.s3.climb.ac.uk/bulkfiles/lab-on-an-ssd_20190830_160932_AAQ411_minion_sequencing_run_EBOV_Amplicons_flongle.fast5) |
 
 ***
 
@@ -33,6 +33,12 @@ folder: artic
 
 
 > note: the FAK25288 flow cell was subject to a nuclease flush between runs
+
+***
+
+## Acknowledgements
+
+Thanks to Claire Lonsdale (DSTL), Babak Afrough, Steve Pullan, Miles Carroll and Roger Hewson (PHE) for help with generating these datasets.
 
 
 {% include icon-callout.html

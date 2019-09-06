@@ -73,8 +73,8 @@ entries:
   - title: Data Releases
     output: web, pdf
     folderitems:
-    - title: PHE data release 2019
-      url: /phe_data_release_2019.html
+    - title: Protocol Validation 2019
+      url: /protocol_validation_2019.html
       output: web, pdf
 
 
