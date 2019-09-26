@@ -4,7 +4,7 @@ title_page: true
 keywords: artic
 tags:
 sidebar: artic_sidebar
-permalink: index.html
+permalink: protocols.html
 toc: false
 summary:
 ---
