@@ -13,7 +13,6 @@ summary:
 
 <script type="text/javascript">
   let MyWidget = _protocolsio.init({
-    "id": "widget-1",
     "type": "list",
     "selector": "widget-1-div",
     "doi": "10.17504/protocols.io.7nxhmfn",
@@ -22,6 +21,7 @@ summary:
     "on_save": (widget) => {console.log(widget)},
     "on_sign_out": () => {},
   });
+  let data = MyWidget.get();
 </script>
 
 <div id="widget-1-div"></div>
