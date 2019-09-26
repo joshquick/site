@@ -22,9 +22,9 @@ folder: artic
 {% include icon-callout.html
 type='default'
 file='primal-scheme.png'
-url='http://primal.zibraproject.org'
+url='http://primal.artic.network'
 width='17%'
-title='<a href="http://primal.zibraproject.org">Primal Scheme</a>'
+title='<a href="http://primal.artic.network">Primal Scheme</a>'
 subtitle='Web-based tool for designing multiplex PCR primers for generating tiling amplicons'
 %}
 

@@ -70,3 +70,11 @@ entries:
       url: /zika_virus.html
       output: web, pdf
 
+  - title: Data Releases
+    output: web, pdf
+    folderitems:
+    - title: Protocol Validation 2019
+      url: /protocol_validation_2019.html
+      output: web, pdf
+
+
