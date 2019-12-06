@@ -40,6 +40,9 @@ Ebola virus Nanopore sequencing protocol:
 : > A complete step by step protocol that covers primers, amplicon preparation and clean-up, a single-tube protocol to barcode and adaptor ligate the library, and running minION.
 : Web: [http://artic.network/ebov/ebov-seq-sop.html](/ebov/ebov-seq-sop.html)
 : PDF: [ARTIC-EBOV-seqSOP-v2.0.0.pdf](/files/ARTIC-EBOV-seqSOP-v2.0.0.pdf)
+: > Version française:
+: Web: [http://artic.network/ebov/ebov-seq-sop-fr.html](/ebov/ebov-seq-sop-fr.html)
+: PDF: [ARTIC-EBOV-seqSOP-v2.0.0-fr.pdf](/files/ARTIC-EBOV-seqSOP-v2.0.0-fr.pdf)
 
 <br />
 Setting up the laptop computing environment using Conda:
