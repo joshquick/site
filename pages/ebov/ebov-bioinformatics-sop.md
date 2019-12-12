@@ -2,7 +2,7 @@
 title: "Ebola virus Nanopore sequencing bioinformatics protocol | amplicon, native barcoding"
 keywords: protocol
 layout: document
-last_updated: May 18, 2018
+last_updated: Dec 12, 2019
 tags: [protocol]
 summary:
 permalink: ebov/ebov-bioinformatics-sop.html
@@ -10,7 +10,7 @@ folder: ebov
 title_text: "Ebola virus bioinformatics protocol"
 subtitle_text: "Nanopore | bioinformatics"
 document_name: "ARTIC-EBOV-bioinformaticsSOP"
-version: v1.0.0
+version: v1.0.1
 creation_date: 2018-05-26
 revision_date: 
 forked_from: 
@@ -59,44 +59,56 @@ Activate the ARTIC environment:
 source activate artic-ebov
 ```
 
-### Basecalling with Albacore (MinION on laptop)
+### Basecalling with MinKNOW (local basecalling)
 
-Run the Albacore basecaller on the new MinION run folder:
+When setting up the run, turn Basecalling on.
+
+### Basecalling with Guppy
+
+If you did basecalling with MinKNOW, skip this step.
+
+Run the Guppy basecaller on the new MinION run folder:
+
+For fast mode basecalling:
 
 ```bash
-read_fast5_basecaller.py -c r94_450bps_linear.cfg -i /path/to/reads -s run_name -o fastq -t 4 -r --barcoding
-````
+guppy_basecaller -c dna_r9.4.1_450bps_fast.cfg -i /path/to/reads -s run_name -x auto -r
+```
+
+For high-accuracy mode basecalling:
+
+```bash
+guppy_basecaller -c dna_r9.4.1_450bps_hac.cfg -i /path/to/reads -s run_name -x auto -r
+```
 
 You need to substitute `/path/to/reads` to the folder where the FAST5 files from your
 run are. Common locations are:
 
-   - Mac: ```/Library/MinKNOW/data/reads/run_name```
-   - Linux: ```/var/lib/MinKNOW/data/reads```
+   - Mac: ```/Library/MinKNOW/data/run_name```
+   - Linux: ```/var/lib/MinKNOW/data/run_name```
    - Windows ```c:/data/reads```
    
 This will create a folder called `run_name` with the base-called reads in it.
 
 ### Consensus sequence generation
 
-Gather up the FASTQ output from Albacore:
+We first collect all the FASTQ files (typically stored in files each containing 4000 reads)
+into a single file.
 
 ```bash
-artic gather --min-length 400 --max-length 700 --prefix run_name basecalled_reads
+artic gather --min-length 400 --max-length 700 --prefix run_name /path/to/reads
 ```
 
-Here `basecalled_reads` should be the folder in which Albacore put the base-called reads (i.e., `run_name` from the command above).
+Here `/path_to_readss` should be the folder in which MinKNOW put the base-called reads (i.e., `run_name` from the command above).
 
 We use a length filter here of between 400 and 700 to remove obviously chimeric reads.
 
-> **Basecalling using MinIT or GridION**
-> 
-> If running on MinIT or GridION and you have used Guppy to basecall through Dogfish, instead you can do:
-> 
-> ```bash
-> artic gather --guppy --min-length 400 --max-length 700 --prefix run_name /data/basecalled/path/to/reads
-> ```
+You may need to change these numbers if you are using different length primer schemes. Try the minimum lengths of the amplicons as the 
+minimum, and the maximum length of the amplicons plus 200 as the maximum.
 
-You will now have a file called: ``run_name_all.fastq``
+I.e. if your amplicons are 300 base pairs, use --min-length 300 --max-length 500
+
+You will now have a file called: ``run_name_pass.fastq``
 and a file called ``run_name_sequencing_summary.txt``, 
 as well as individual files for each barcode (if previously demultiplexed).
 
@@ -106,21 +118,29 @@ This stage is obligatory, even if you have already demultiplexed with Albacore, 
 significant barcoding misassignments that can confound results:
 
 ```bash
-artic demultiplex --threads 4 run_name_all.fastq
+artic demultiplex --threads 4 run_name_pass.fastq
 ```
 
 Now you will have new files called:
 
 ```bash
-run_name_all_BC01.fastq
-run_name_all_BC02.fastq
-run_name_all_BC03.fastq
+run_name_pass_BC01.fastq
+run_name_pass_BC02.fastq
+run_name_pass_BC03.fastq
 ```
 
 ### Create the nanopolish index (once per sequencing run, not per sample)
 
+If you used MinKNOW basecalling, use the following command:
+
 ```bash
-nanopolish index -s run_name_sequencing_summary.txt -d /path/to/reads run_name_all.fastq
+nanopolish index -d /path/to/reads run_name_pass.fastq
+```
+
+If you manually performed Guppy basecalling (but not if you used MinKNOW basecalling), this command can be made a little faster by using:
+
+```bash
+nanopolish index -s run_name_sequencing_summary.txt -d /path/to/reads run_name_pass.fastq
 ```
 
 Again, alter ``/path/to/reads`` to point to the original location of the FAST5 files.
@@ -130,7 +150,7 @@ Again, alter ``/path/to/reads`` to point to the original location of the FAST5 f
 For each barcode you wish to process:
 
 ```bash
-artic minion --normalise 200 --threads 4 --scheme-directory artic-ebov/primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_all.fastq ZaireEbola/V2 samplename
+artic minion --normalise 200 --threads 4 --scheme-directory ~/artic/artic-ebov/primer-schemes --read-file run_name_final_NB01.fastq --nanopolish-read-file run_name_pass.fastq ZaireEbola/V2 samplename
 ```
 
 Replace ``samplename`` as appropriate:
